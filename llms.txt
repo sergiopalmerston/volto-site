@@ -1,0 +1,41 @@
+# Volto Consultoria
+
+> A Volto é um hub de estruturação para empresas em crescimento que conecta finanças, posicionamento, vendas, operação e tecnologia aplicada, começando por um Diagnóstico 360 e evoluindo para sprints de implantação e acompanhamento recorrente.
+
+- **Slogan:** Clareza para dar o próximo passo.
+- **Região:** Goiânia (GO), Brasil — Caldas Novas e região.
+- **Contato:** WhatsApp (64) 99268-6208 · contato@voltoconsultoria.com.br · @voltoconsultoria
+
+## Para quem é
+Empresas em crescimento e em estágio inicial, cujo dono está engajado e disposto a decidir com base em dado. Não é para quem busca fórmula mágica, não quer se envolver no processo, ou quer apenas "mais posts" sem mexer na raiz do problema.
+
+## Serviços (10 trilhas)
+- **Diagnóstico 360** — leitura completa do negócio em quatro frentes que devolve um plano de prioridades. É a porta de entrada.
+- **Reorganização Financeira** — fluxo de caixa, preço, DRE gerencial, indicadores e leitura de turnaround.
+- **Posicionamento, Marca e Vendas** — oferta clara, proposta de valor, funil e follow-up.
+- **Sistemas Simples de Gestão** — CRM leve, pedidos, agenda, estoque; um sistema que a empresa opera sozinha.
+- **Sites Operáveis** — site que capta clientes e que o próprio dono atualiza.
+- **Automações e IA Aplicada** — gatilhos, integrações e IA copiloto com revisão humana.
+- **Acesso a Crédito** — preparar, comparar e simular captação. A Volto não é correspondente bancário, não capta nem assina pelo cliente e não garante aprovação.
+- **Operação Assistida** — advisory recorrente ou BPO (um profissional da Volto opera uma função dentro da empresa).
+- **Combo Personalizável** — várias trilhas combinadas em um único plano.
+- **Projetos Especiais** — desafios fora do padrão.
+
+## Método (ordem fixa)
+Triagem · Reunião de alinhamento (anamnese) · Arquitetura e proposta · Diagnóstico e design ágil · Sprint de implantação · Recorrência seletiva. O diagnóstico vem depois da proposta e é onde o sprint é desenhado; é pré-requisito de qualquer sprint.
+
+## Tecnologia com governança
+A Volto usa IA e automação com confiança graduada: verde (rotina e baixo risco, a automação roda sozinha), amarelo (decisão relevante, a IA sugere e uma pessoa revisa) e vermelho (crítico, a decisão é sempre humana). O cliente é dono dos próprios dados.
+
+## Perguntas frequentes
+- **O que é a Volto?** Um hub de estruturação para empresas em crescimento que conecta finanças, posicionamento, vendas, operação e tecnologia aplicada.
+- **Como sei por onde começar?** Pelo Diagnóstico 360, que lê as quatro frentes e devolve um plano de prioridades.
+- **Quanto custa começar?** O investimento é definido após a triagem e a proposta, conforme o escopo. A Volto não divulga tabela de preços em material público.
+- **Onde atua?** Sede em Goiânia (GO), com Caldas Novas e região, presencial e remota.
+- **A Volto usa IA com segurança?** Sim, com governança de confiança graduada e revisão humana no que é crítico.
+- **A Volto substitui o contador?** Não. Cuida da gestão financeira e integra com a contabilidade.
+
+## Links
+- Início: https://voltoconsultoria.com.br/
+- Diagnóstico 360: https://voltoconsultoria.com.br/diagnostico-360.html
+- Contato: https://voltoconsultoria.com.br/contato.html
