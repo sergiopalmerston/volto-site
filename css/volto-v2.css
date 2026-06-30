@@ -17,9 +17,9 @@
 
 /* ---------- 2. Sistema de estampas variado ---------- */
 /* novas fontes de textura (antes não usadas) */
-.e-teal{background-image:url('../assets/estampas/est-teal.png')}
-.e-areia2{background-image:url('../assets/estampas/est-areia.png')}
-.e-geo-c{background-image:url('../assets/estampas/est-geo-cerrado.png')}
+.e-teal{background-image:url('../assets/estampas/est-teal.webp')}
+.e-areia2{background-image:url('../assets/estampas/est-areia.webp')}
+.e-geo-c{background-image:url('../assets/estampas/est-geo-cerrado.webp')}
 .e-mono{background-image:url('../assets/estampas/monograma-tile.svg')}
 
 /* faixa-divisor com monograma ladrilhado que deriva devagar (ritmo + movimento) */
@@ -83,10 +83,10 @@
 /* palco de detalhe — card único temático que faz crossfade */
 .fx-stage{position:relative;margin-top:26px;border-radius:var(--r-xl);background:var(--fcb);border:1px solid var(--line);border-top:3px solid var(--fc);box-shadow:var(--sh-sm);overflow:hidden;transition:background .5s var(--ease),border-color .5s}
 .fx-stage::before{content:"";position:absolute;inset:0;background-size:cover;background-position:center;opacity:.07;mix-blend-mode:multiply;transition:opacity .5s;pointer-events:none}
-.frentes-explorer.is-fin .fx-stage::before{background-image:url('../assets/estampas/est-terracota.png')}
-.frentes-explorer.is-mkt .fx-stage::before{background-image:url('../assets/estampas/est-teal.png')}
-.frentes-explorer.is-ops .fx-stage::before{background-image:url('../assets/estampas/est-dourado.png')}
-.frentes-explorer.is-assist .fx-stage::before{background-image:url('../assets/estampas/est-cerrado.png')}
+.frentes-explorer.is-fin .fx-stage::before{background-image:url('../assets/estampas/est-terracota.webp')}
+.frentes-explorer.is-mkt .fx-stage::before{background-image:url('../assets/estampas/est-teal.webp')}
+.frentes-explorer.is-ops .fx-stage::before{background-image:url('../assets/estampas/est-dourado.webp')}
+.frentes-explorer.is-assist .fx-stage::before{background-image:url('../assets/estampas/est-cerrado.webp')}
 .fx-panels{position:relative}
 .fx-panel{position:absolute;inset:0;display:grid;grid-template-columns:auto 1fr auto;gap:clamp(16px,2.4vw,30px);align-items:center;padding:clamp(20px,2.6vw,30px) clamp(22px,3vw,38px);opacity:0;transform:translateY(14px);transition:opacity .45s var(--ease),transform .45s var(--ease);pointer-events:none;text-align:left}
 .fx-panel.on{position:relative;opacity:1;transform:none;pointer-events:auto}
@@ -130,10 +130,10 @@
 .ftab-body .fx-go{margin-top:18px;padding-left:0}
 
 /* temas de frente — cor sólida no visual + estampa variada + tag */
-.t-fin .ftab-visual{background:#963417}.t-fin .vtex{background-image:url('../assets/estampas/est-terracota.png')}.t-fin .ftab-tag{background:#963417}.t-fin .ftab-body .fx-go{color:#963417}
-.t-mkt .ftab-visual{background:#618981}.t-mkt .vtex{background-image:url('../assets/estampas/est-teal.png')}.t-mkt .ftab-tag{background:#4f7269}.t-mkt .ftab-body .fx-go{color:#4f7269}
-.t-ops .ftab-visual{background:#c0852f}.t-ops .vtex{background-image:url('../assets/estampas/est-dourado.png')}.t-ops .ftab-tag{background:#a9691f}.t-ops .ftab-body .fx-go{color:#a9691f}
-.t-assist .ftab-visual{background:#3C3F20}.t-assist .vtex{background-image:url('../assets/estampas/est-cerrado.png')}.t-assist .ftab-tag{background:#3C3F20}.t-assist .ftab-body .fx-go{color:#3C3F20}
+.t-fin .ftab-visual{background:#963417}.t-fin .vtex{background-image:url('../assets/estampas/est-terracota.webp')}.t-fin .ftab-tag{background:#963417}.t-fin .ftab-body .fx-go{color:#963417}
+.t-mkt .ftab-visual{background:#618981}.t-mkt .vtex{background-image:url('../assets/estampas/est-teal.webp')}.t-mkt .ftab-tag{background:#4f7269}.t-mkt .ftab-body .fx-go{color:#4f7269}
+.t-ops .ftab-visual{background:#c0852f}.t-ops .vtex{background-image:url('../assets/estampas/est-dourado.webp')}.t-ops .ftab-tag{background:#a9691f}.t-ops .ftab-body .fx-go{color:#a9691f}
+.t-assist .ftab-visual{background:#3C3F20}.t-assist .vtex{background-image:url('../assets/estampas/est-cerrado.webp')}.t-assist .ftab-tag{background:#3C3F20}.t-assist .ftab-body .fx-go{color:#3C3F20}
 
 /* ---------- 6. Movimento: marquee/título ---------- */
 .v2 .mq-item{font-size:clamp(1.15rem,1.8vw,1.4rem)}
@@ -162,3 +162,7 @@
 @media(prefers-reduced-motion:reduce){
   .estampa-divisor::before,.estampa--breathe,.ftab-visual .vtex,.fx-chip .fx-ico img.ic-d{animation:none!important}
 }
+
+/* a11y: contraste em seções escuras — sobrepõe .v2 .section .eyebrow (terracota) por areia */
+.v2 .section--dark .eyebrow,.v2 .section--terra .eyebrow{color:var(--areia)}
+.v2 .section--dark .kpi{color:var(--areia)}

@@ -5,13 +5,12 @@
    Mobile-first, base-8, acessível, com movimento (respeita reduce-motion).
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap');
 
 :root{
   --terracota:#963417; --terracota-d:#7a2a12; --areia:#EAD2B0; --clareza:#EDE6DE;
   --cerrado:#3C3F20; --cerrado-d:#2f311a; --verdeagua:#618981; --dourado:#CE893B;
   --surface:#FBF8F4; --paper:#fff;
-  --text:#3C3F20; --text-soft:#5e6046; --text-mut:#83836e;
+  --text:#3C3F20; --text-soft:#5e6046; --text-mut:#6b6b58;
   --on-dark:#EDE6DE; --on-dark-soft:#cfc9b9;
   --heading:#963417; --line:rgba(60,63,32,.13); --line-2:rgba(60,63,32,.22); --line-dark:rgba(234,210,176,.20);
 
@@ -45,7 +44,7 @@ h3,.h3{font-size:clamp(1.3rem,2.1vw,1.6rem);color:var(--cerrado);font-weight:600
 .lead{font-family:var(--font-body);font-size:clamp(1.13rem,1.65vw,1.4rem);line-height:1.5;color:var(--text-soft);font-weight:400}
 .eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:.98rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--terracota);margin:0 0 var(--sp-2)}
 .eyebrow .em{width:32px;height:32px;color:var(--terracota);flex:none}
-.section--dark .eyebrow,.section--terra .eyebrow{color:var(--dourado)}
+.section--dark .eyebrow,.section--terra .eyebrow{color:var(--areia)}
 .section--dark .eyebrow .em,.section--terra .eyebrow .em{color:var(--areia)}
 .measure{max-width:60ch}.measure-s{max-width:46ch}
 
@@ -70,12 +69,12 @@ h3,.h3{font-size:clamp(1.3rem,2.1vw,1.6rem);color:var(--cerrado);font-weight:600
 .estampa{position:absolute;inset:0;background-size:cover;background-position:center;pointer-events:none;z-index:0}
 .estampa--wash{opacity:.06}
 .estampa--corner{inset:auto;width:min(42%,420px);aspect-ratio:1;background-size:cover;opacity:.5;mix-blend-mode:multiply;-webkit-mask:radial-gradient(125% 125% at 75% 25%,#000 28%,transparent 72%);mask:radial-gradient(125% 125% at 75% 25%,#000 28%,transparent 72%)}
-.e-terra{background-image:url('../assets/estampas/est-terracota.png')}
-.e-cerrado{background-image:url('../assets/estampas/est-cerrado.png')}
-.e-dourado{background-image:url('../assets/estampas/est-dourado.png')}
-.e-areia{background-image:url('../assets/estampas/est-suave.png')}
-.e-geo-terra{background-image:url('../assets/estampas/est-geo-terra.png')}
-.e-geo-cerrado{background-image:url('../assets/estampas/est-geo-cerrado.png')}
+.e-terra{background-image:url('../assets/estampas/est-terracota.webp')}
+.e-cerrado{background-image:url('../assets/estampas/est-cerrado.webp')}
+.e-dourado{background-image:url('../assets/estampas/est-dourado.webp')}
+.e-areia{background-image:url('../assets/estampas/est-suave.webp')}
+.e-geo-terra{background-image:url('../assets/estampas/est-geo-terra.webp')}
+.e-geo-cerrado{background-image:url('../assets/estampas/est-geo-cerrado.webp')}
 .has-estampa{position:relative;overflow:hidden}
 .has-estampa>.container,.has-estampa>*{position:relative;z-index:1}
 .has-estampa>.estampa{position:absolute;z-index:0}
@@ -192,10 +191,10 @@ a.card:hover .bicon{background:rgba(150,52,23,.12)}
 .step{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:24px 22px;transition:transform .2s var(--ease),box-shadow .2s}
 .step:hover{transform:translateY(-3px);box-shadow:var(--sh-sm)}
 .step .n{font-family:var(--font-display);font-weight:600;color:#fff;background:var(--terracota);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:1.05rem}
-.step h4{font-family:var(--font-display);color:var(--cerrado);font-size:1.12rem;margin-bottom:6px}
+.step h3{font-family:var(--font-display);color:var(--cerrado);font-size:1.12rem;margin-bottom:6px}
 .step p{color:var(--text-soft);font-size:.95rem}
 .section--dark .step{background:rgba(255,255,255,.035);border-color:var(--line-dark)}
-.section--dark .step h4{color:var(--areia)}.section--dark .step p{color:var(--on-dark-soft)}
+.section--dark .step h3{color:var(--areia)}.section--dark .step p{color:var(--on-dark-soft)}
 
 /* "O que não é" */
 .notblock{background:rgba(150,52,23,.05);border:1px solid rgba(150,52,23,.18);border-left:4px solid var(--terracota);border-radius:0 var(--r-md) var(--r-md) 0;padding:clamp(22px,2.6vw,30px)}
@@ -243,7 +242,7 @@ a.card:hover .bicon{background:rgba(150,52,23,.12)}
 .field{display:grid;gap:7px}
 .field label{font-weight:600;font-size:.95rem;color:var(--cerrado)}.field .req{color:var(--terracota)}
 .field input,.field select,.field textarea{font-family:var(--font-body);font-size:1rem;color:var(--cerrado);background:var(--surface);border:1.5px solid var(--line-2);border-radius:var(--r-md);padding:14px 15px;width:100%;transition:border-color .2s,box-shadow .2s}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--terracota);outline:none;box-shadow:0 0 0 3px rgba(150,52,23,.12)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--terracota);outline:none;box-shadow:0 0 0 3px rgba(150,52,23,.35)}
 .field textarea{min-height:120px;resize:vertical}
 @media(min-width:640px){.form .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}}
 .form-note{font-size:.85rem;color:var(--text-mut)}
@@ -256,7 +255,7 @@ a.card:hover .bicon{background:rgba(150,52,23,.12)}
 .footer-grid{display:grid;gap:var(--sp-4)}
 @media(min-width:760px){.footer-grid{grid-template-columns:1.5fr 1fr 1fr}}
 .site-footer .brand{color:var(--areia)}.site-footer .brand .logo{height:28px;margin-bottom:var(--sp-2)}
-.site-footer h4{font-family:var(--font-body);text-transform:uppercase;letter-spacing:.09em;font-size:.76rem;color:var(--areia);margin-bottom:var(--sp-2);font-weight:700}
+.site-footer h3{font-family:var(--font-body);text-transform:uppercase;letter-spacing:.09em;font-size:.76rem;color:var(--areia);margin-bottom:var(--sp-2);font-weight:700}
 .footer-links{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:.95rem}
 .footer-desc{color:#bdb8a8;max-width:40ch;font-size:.95rem}
 .footer-bottom{margin-top:var(--sp-5);padding-top:var(--sp-3);border-top:1px solid var(--line-dark);display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:space-between;font-size:.82rem;color:#a09d8a}
@@ -271,12 +270,12 @@ a.card:hover .bicon{background:rgba(150,52,23,.12)}
 .skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;z-index:100;background:#fff;padding:10px 16px;border-radius:8px}
 .kpi{font-family:var(--font-display);font-size:clamp(2.1rem,4vw,3rem);color:var(--terracota);line-height:1;font-weight:600}
 .kpi-l{color:var(--text-soft);font-size:.95rem;margin-top:8px}
-.section--dark .kpi{color:var(--dourado)}.section--dark .kpi-l{color:var(--on-dark-soft)}
+.section--dark .kpi{color:var(--areia)}.section--dark .kpi-l{color:var(--on-dark-soft)}
 
 /* ===== v3: movimento, cores secundárias, estampa em card ===== */
 /* textura de estampa animada (lenta) no hero — como TEXTURA, não foto */
 .hero{position:relative;overflow:hidden}
-.hero-texture{position:absolute;inset:0;z-index:0;opacity:.13;background-image:url('../assets/estampas/est-hero-color.png');background-size:780px auto;animation:drift 48s linear infinite}
+.hero-texture{position:absolute;inset:0;z-index:0;opacity:.13;background-image:url('../assets/estampas/est-hero-color.webp');background-size:780px auto;animation:drift 48s linear infinite}
 .hero>.container{position:relative;z-index:1}
 @keyframes drift{to{background-position:660px 0}}
 /* reveal palavra a palavra do título */
