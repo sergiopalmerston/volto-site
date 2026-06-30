@@ -17,6 +17,7 @@
 <meta property="og:site_name" content="Volto Consultoria">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="css/volto-site.css">
+<link rel="stylesheet" href="css/volto-v2.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"Organization","@id":"https://voltoconsultoria.com.br/#org","name":"Volto Consultoria","url":"https://voltoconsultoria.com.br/","logo":"https://voltoconsultoria.com.br/assets/logo-horizontal-terracota.png","description":"Hub de estruturação para empresas em crescimento: finanças, posicionamento, vendas, operação e tecnologia aplicada.","slogan":"Clareza para dar o próximo passo.","email":"contato@voltoconsultoria.com.br","telephone":"+55-64-99268-6208","areaServed":"BR","sameAs":["https://instagram.com/voltoconsultoria"]},
@@ -44,9 +45,9 @@
       <a href="#metodo">Método</a>
       <a href="#sobre">Sobre</a>
     </nav>
-    <a class="btn btn--primary header-cta" href="contato.html">Agendar conversa</a>
+    <a class="btn btn--primary header-cta" href="contato.html">Falar com a Volto</a>
     <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mm">
-      <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="17" x2="20" y2="17"></line></svg>
     </button>
   </div>
   <div class="mobile-menu" id="mm"><div class="container">
@@ -54,80 +55,98 @@
     <a href="#servicos">Serviços</a>
     <a href="#metodo">Método</a>
     <a href="#sobre">Sobre</a>
-    <a class="btn btn--primary" href="contato.html">Agendar conversa de triagem</a>
+    <a class="btn btn--primary" href="contato.html">Falar com a Volto</a>
   </div></div>
 </header>
 
-<main id="main">
+<main id="main" class="v2">
 
-  <!-- HERO -->
-  <section class="hero">
+  <section class="hero heroA">
     <div class="hero-texture" aria-hidden="true"></div>
     <div class="container hero-frentes">
-      <p class="eyebrow fu f1" style="justify-content:center"><svg class="em"><use href="#mk"/></svg> Hub de estruturação para empresas em crescimento</p>
-      <h1 class="display fu f2">Seu negócio cresceu na prática. Falta dar <span class="ital">estrutura</span> a ele.</h1>
-      <div class="frentes-strip" id="frStrip">
-        <button class="fr-chip" type="button" aria-label="Finanças" data-cap="&lt;b&gt;Finanças.&lt;/b&gt; Enxergar onde o negócio ganha, onde perde e onde agir — do preço e da margem ao fluxo de caixa e à leitura de turnaround."><span class="fr-ico"><img src="assets/icons/ic-waves.png" alt=""></span><span class="fr-name">Finanças</span></button>
-        <button class="fr-chip" type="button" aria-label="Marca e vendas" data-cap="&lt;b&gt;Marca e vendas.&lt;/b&gt; Sair da mensagem genérica e da venda no improviso para uma oferta clara, com funil e follow-up que convertem."><span class="fr-ico"><img src="assets/icons/ic-person.png" alt=""></span><span class="fr-name">Marca e vendas</span></button>
-        <button class="fr-chip" type="button" aria-label="Operação digital" data-cap="&lt;b&gt;Operação digital.&lt;/b&gt; Tirar a empresa do WhatsApp e da planilha com sistemas leves, sites operáveis e automação com IA — sempre sob governança."><span class="fr-ico"><img src="assets/icons/ic-screen.png" alt=""></span><span class="fr-name">Operação digital</span></button>
-        <button class="fr-chip" type="button" aria-label="Operação assistida" data-cap="&lt;b&gt;Operação assistida.&lt;/b&gt; Depois de organizar, manter o ritmo: advisory recorrente ou um profissional da Volto operando uma função dentro da empresa."><span class="fr-ico"><img src="assets/icons/ic-mail.png" alt=""></span><span class="fr-name">Operação assistida</span></button>
+      <p class="eyebrow fu f1" style="justify-content:center"><svg class="em"><use href="#mk"></use></svg> Hub de estruturação para empresas em crescimento</p>
+      <h1 class="display fu f2">Seu negócio cresceu. Agora falta dar <span class="ital">estrutura</span> a ele.</h1>
+      <p class="hero-sub fu f3"><b>Quatro frentes, um só time</b> — que trata cada parte do negócio sabendo como ela afeta as outras. Escolha por onde olhar.</p>
+
+      <div class="frentes-explorer is-fin fu f3" id="frEx">
+        <div class="fx-rail">
+          <button class="fx-chip on" type="button" data-fr="fin" aria-label="Finanças"><span class="fx-ico"><img class="ic-d" src="assets/icons/ic-waves.png" alt=""><img class="ic-l" src="assets/icons/ic-waves-areia.png" alt=""></span><span class="fx-name">Finanças</span></button>
+          <button class="fx-chip" type="button" data-fr="mkt" aria-label="Marca e vendas"><span class="fx-ico"><img class="ic-d" src="assets/icons/ic-person.png" alt=""><img class="ic-l" src="assets/icons/ic-person-areia.png" alt=""></span><span class="fx-name">Marca e vendas</span></button>
+          <button class="fx-chip" type="button" data-fr="ops" aria-label="Operação digital"><span class="fx-ico"><img class="ic-d" src="assets/icons/ic-screen.png" alt=""><img class="ic-l" src="assets/icons/ic-screen-areia.png" alt=""></span><span class="fx-name">Operação digital</span></button>
+          <button class="fx-chip" type="button" data-fr="assist" aria-label="Operação assistida"><span class="fx-ico"><img class="ic-d" src="assets/icons/ic-mail.png" alt=""><img class="ic-l" src="assets/icons/ic-mail-areia.png" alt=""></span><span class="fx-name">Operação assistida</span></button>
+        </div>
+        <div class="fx-stage">
+          <div class="fx-panels">
+            <article class="fx-panel on" data-fr="fin">
+              <div class="fx-badge"><img src="assets/icons/ic-waves-areia.png" alt=""></div>
+              <div class="fx-text"><h3>Por dentro: finanças</h3><p>Enxergar onde o negócio ganha, onde perde e onde agir — do preço e da margem ao fluxo de caixa e à leitura de turnaround.</p></div>
+              <a class="fx-go" href="diagnostico-360.html">Começar pelo Diagnóstico 360 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+            </article>
+            <article class="fx-panel" data-fr="mkt">
+              <div class="fx-badge"><img src="assets/icons/ic-person-areia.png" alt=""></div>
+              <div class="fx-text"><h3>Por fora: marca e vendas</h3><p>Sair da mensagem genérica e da venda no improviso para uma oferta clara, com funil e follow-up que convertem.</p></div>
+              <a class="fx-go" href="contato.html">Falar sobre marca e vendas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+            </article>
+            <article class="fx-panel" data-fr="ops">
+              <div class="fx-badge"><img src="assets/icons/ic-screen-areia.png" alt=""></div>
+              <div class="fx-text"><h3>Operação digital</h3><p>Tirar a empresa do WhatsApp e da planilha com sistemas leves, sites operáveis e automação com IA — sempre sob governança.</p></div>
+              <a class="fx-go" href="contato.html">Falar sobre operação digital <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+            </article>
+            <article class="fx-panel" data-fr="assist">
+              <div class="fx-badge"><img src="assets/icons/ic-mail-areia.png" alt=""></div>
+              <div class="fx-text"><h3>No tempo: operação assistida</h3><p>Depois de organizar, manter o ritmo: advisory recorrente ou um profissional da Volto operando uma função dentro da empresa.</p></div>
+              <a class="fx-go" href="contato.html">Falar sobre operação assistida <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+            </article>
+          </div>
+        </div>
       </div>
-      <p class="fr-cap" id="frCap"><b>Quatro frentes, um só time</b> que enxerga o negócio inteiro. Passe o mouse em cada uma para conhecer.</p>
-      <div class="btn-row fu" style="justify-content:center;margin-top:6px">
-        <a class="btn btn--primary btn--lg" href="contato.html">Agendar conversa de triagem <svg class="arw" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn--secondary btn--lg" href="diagnostico-360.html">Conhecer o Diagnóstico 360</a>
+
+      <div class="btn-row fu f4" style="justify-content:center;margin-top:30px">
+        <a class="btn btn--primary btn--lg" href="contato.html">Agendar conversa de triagem <svg class="arw" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        <a class="btn btn--secondary btn--lg" href="diagnostico-360.html">Ver como funciona o diagnóstico</a>
       </div>
-      <p style="margin-top:16px;color:var(--text-mut);font-size:.9rem">Diagnóstico como porta de entrada · Goiânia · Caldas Novas e região</p>
-      <script>
-      (function(){var s=document.getElementById('frStrip'),cap=document.getElementById('frCap');if(!s||!cap)return;var def=cap.innerHTML;
-      function pop(){cap.classList.remove('pop');void cap.offsetWidth;cap.classList.add('pop');}
-      s.querySelectorAll('.fr-chip').forEach(function(c){
-        function on(){s.querySelectorAll('.fr-chip').forEach(function(x){x.classList.remove('on');});c.classList.add('on');cap.innerHTML=c.getAttribute('data-cap');pop();}
-        function off(){c.classList.remove('on');cap.innerHTML=def;pop();}
-        c.addEventListener('mouseenter',on);c.addEventListener('mouseleave',off);c.addEventListener('focus',on);c.addEventListener('blur',off);
-      });})();
-      </script>
+      <p class="fu f4" style="margin-top:14px;color:var(--text-mut);font-size:.9rem">Diagnóstico como porta de entrada · Goiânia · Caldas Novas e região</p>
     </div>
   </section>
 
-  <!-- MARQUEE -->
+  <div class="estampa-divisor" aria-hidden="true"></div>
+
   <div class="section--soft" style="border-block:1px solid var(--line);padding-block:18px">
     <div class="marquee"><div class="marquee-track" id="mq">
-      <span class="mq-item">Diagnóstico 360 <svg class="dot"><use href="#mk"/></svg></span>
-      <span class="mq-item">Reorganização Financeira <svg class="dot"><use href="#mk"/></svg></span>
-      <span class="mq-item">Posicionamento e Vendas <svg class="dot"><use href="#mk"/></svg></span>
-      <span class="mq-item">Sistemas de Gestão <svg class="dot"><use href="#mk"/></svg></span>
-      <span class="mq-item">Sites Operáveis <svg class="dot"><use href="#mk"/></svg></span>
-      <span class="mq-item">Automações e IA <svg class="dot"><use href="#mk"/></svg></span>
-      <span class="mq-item">Acesso a Crédito <svg class="dot"><use href="#mk"/></svg></span>
-      <span class="mq-item">Operação Assistida <svg class="dot"><use href="#mk"/></svg></span>
+      <span class="mq-item">Diagnóstico 360 <svg class="dot"><use href="#mk"></use></svg></span>
+      <span class="mq-item">Reorganização Financeira <svg class="dot"><use href="#mk"></use></svg></span>
+      <span class="mq-item">Posicionamento e Vendas <svg class="dot"><use href="#mk"></use></svg></span>
+      <span class="mq-item">Sistemas de Gestão <svg class="dot"><use href="#mk"></use></svg></span>
+      <span class="mq-item">Sites Operáveis <svg class="dot"><use href="#mk"></use></svg></span>
+      <span class="mq-item">Automações e IA <svg class="dot"><use href="#mk"></use></svg></span>
+      <span class="mq-item">Acesso a Crédito <svg class="dot"><use href="#mk"></use></svg></span>
+      <span class="mq-item">Operação Assistida <svg class="dot"><use href="#mk"></use></svg></span>
     </div></div>
   </div>
 
-  <!-- DOR -->
   <section class="section section--alt">
     <div class="container">
-      <p class="eyebrow reveal"><svg class="em"><use href="#mk"/></svg> O dia a dia de quem toca o negócio</p>
+      <p class="eyebrow reveal"><svg class="em"><use href="#mk"></use></svg> O dia a dia de quem toca o negócio</p>
       <h2 class="measure reveal">Vende, mas a estrutura <span class="ital">não acompanha?</span></h2>
       <div class="grid cols-3" style="margin-top:40px">
-        <div class="card card--soft reveal d1"><div class="bicon"><img src="assets/icons/ic-waves.png" alt="" width="34" height="34"></div><h3>Fatura, mas no escuro</h3><p>Entra dinheiro, só que você não sabe onde ganha, onde perde e quanto sobra de verdade. Sem isso, todo investimento vira aposta.</p></div>
+        <div class="card card--soft reveal rl d1"><div class="bicon"><img src="assets/icons/ic-waves.png" alt="" width="34" height="34"></div><h3>Fatura, mas no escuro</h3><p>Entra dinheiro, só que você não sabe onde ganha, onde perde e quanto sobra de verdade. Sem isso, todo investimento vira aposta.</p></div>
         <div class="card card--soft reveal d2"><div class="bicon"><img src="assets/icons/ic-power.png" alt="" width="34" height="34"></div><h3>Tudo depende de você</h3><p>A operação não anda sem o dono no meio. Sair um dia já vira risco para o caixa, e crescer vira sinônimo de trabalhar mais.</p></div>
-        <div class="card card--soft reveal d3"><div class="bicon"><img src="assets/icons/ic-folder.png" alt="" width="34" height="34"></div><h3>WhatsApp virou o sistema</h3><p>Pedido, agenda e controle moram em conversas e planilhas soltas. O gargalo é esse — e ele cresce junto com a empresa.</p></div>
+        <div class="card card--soft reveal rr d3"><div class="bicon"><img src="assets/icons/ic-folder.png" alt="" width="34" height="34"></div><h3>WhatsApp virou o sistema</h3><p>Pedido, agenda e controle moram em conversas e planilhas soltas. O gargalo é esse — e ele cresce junto com a empresa.</p></div>
       </div>
       <div class="reveal" style="margin-top:32px">
         <p class="lead measure">Esses sintomas têm causa. O Diagnóstico 360 mostra qual é e por onde começar — antes de gastar no lugar errado.</p>
-        <div class="btn-row" style="margin-top:20px"><a class="btn btn--secondary" href="diagnostico-360.html">Conhecer o Diagnóstico 360</a></div>
+        <div class="btn-row" style="margin-top:20px"><a class="btn btn--secondary" href="diagnostico-360.html">Descobrir o que trava o negócio</a></div>
       </div>
     </div>
   </section>
 
-  <!-- FRENTES -->
-  <section class="section" id="frentes">
+  <section class="section has-estampa" id="frentes">
+    <div class="estampa e-teal estampa--breathe" aria-hidden="true" style="opacity:.05;mix-blend-mode:multiply"></div>
     <div class="container">
       <div class="center">
-        <p class="eyebrow reveal"><svg class="em"><use href="#mk"/></svg> Como a Volto resolve</p>
+        <p class="eyebrow reveal"><svg class="em"><use href="#mk"></use></svg> Como a Volto resolve</p>
         <h2 class="reveal">Quatro frentes, <span class="ital">um só lugar</span></h2>
-        <p class="lead measure reveal">Em vez de cinco fornecedores que não conversam entre si, um time que enxerga o negócio inteiro — e trata cada frente sabendo como ela afeta as outras.</p>
+        <p class="lead measure reveal">Em vez de vários fornecedores que não se falam, um time só — com uma visão única do negócio e responsabilidade ponta a ponta.</p>
       </div>
       <div class="grid cols-2 cols-4" style="margin-top:46px">
         <div class="card frente a-terra reveal d1"><div class="bicon"><img src="assets/icons/ic-waves.png" alt="" width="34" height="34"></div><h3>Por dentro: finanças</h3><p>Onde ganha, onde perde e onde agir — caixa, preço, margem e indicadores que guiam a decisão.</p></div>
@@ -138,45 +157,41 @@
     </div>
   </section>
 
-  <!-- BANDA EM COR SECUNDÁRIA (números factuais) -->
   <section class="section section--verde has-estampa">
-    <div class="estampa estampa--card e-geo-cerrado" aria-hidden="true" style="opacity:.12;mix-blend-mode:soft-light"></div>
+    <div class="estampa estampa--card e-geo-cerrado estampa--breathe" aria-hidden="true" style="opacity:.12;mix-blend-mode:soft-light"></div>
     <div class="container center">
-      <p class="eyebrow reveal"><svg class="em"><use href="#mk"/></svg> A Volto em resumo</p>
+      <p class="eyebrow reveal"><svg class="em"><use href="#mk"></use></svg> A Volto em resumo</p>
       <div class="statgrid" style="margin-top:34px">
-        <div class="stat reveal d1"><span class="num">4</span><span class="lbl">frentes que se conversam</span></div>
-        <div class="stat reveal d2"><span class="num">10</span><span class="lbl">trilhas de serviço combináveis</span></div>
-        <div class="stat reveal d3"><span class="num">6</span><span class="lbl">etapas no método, do diagnóstico à recorrência</span></div>
-        <div class="stat reveal d4"><span class="num">20<span style="font-size:.5em;font-weight:500"> min</span></span><span class="lbl">na conversa de triagem, sem compromisso</span></div>
+        <div class="stat reveal d1"><span class="num" data-count="4">4</span><span class="lbl">frentes que se conversam</span></div>
+        <div class="stat reveal d2"><span class="num" data-count="8">8</span><span class="lbl">trilhas de serviço combináveis</span></div>
+        <div class="stat reveal d3"><span class="num" data-count="6">6</span><span class="lbl">etapas no método, do diagnóstico à recorrência</span></div>
+        <div class="stat reveal d4"><span class="num" data-count="20">20<span style="font-size:.5em;font-weight:500"> min</span></span><span class="lbl">na conversa de triagem, sem compromisso</span></div>
       </div>
     </div>
   </section>
 
-  <!-- DIAGNÓSTICO BAND -->
   <section class="section section--tight">
     <div class="container">
       <div class="cta-band has-estampa reveal">
-        <div class="estampa estampa--card e-dourado" aria-hidden="true"></div>
-        <svg class="wm"><use href="#mk"/></svg>
-        <p class="eyebrow" style="color:#f6dcc8;justify-content:center"><svg class="em" style="color:#fff"><use href="#mk"/></svg> A porta de entrada</p>
-        <h2>Antes de investir em sistema, site ou campanha,<br>descubra o que <span class="ital" style="color:#ffe6cf">trava o negócio</span></h2>
+        <div class="estampa estampa--card e-dourado estampa--breathe" aria-hidden="true"></div>
+        <svg class="wm"><use href="#mk"></use></svg>
+        <p class="eyebrow" style="color:#f6dcc8;justify-content:center"><svg class="em" style="color:#fff"><use href="#mk"></use></svg> A porta de entrada</p>
+        <h2>Descubra o que <span class="ital" style="color:#ffe6cf">trava o negócio</span> — antes de gastar no lugar errado</h2>
         <p>Um diagnóstico que organiza o caos em um plano de prioridades — e diz onde colocar o primeiro real. Decidir sem ele costuma sair bem mais caro.</p>
         <div class="btn-row" style="justify-content:center"><a class="btn btn--on-dark btn--lg" href="diagnostico-360.html">Conhecer o Diagnóstico 360</a></div>
       </div>
     </div>
   </section>
 
-  <!-- SERVIÇOS -->
-  <section class="section section--soft has-estampa" id="servicos">
-    <div class="estampa estampa--card e-areia" aria-hidden="true" style="opacity:.05"></div>
+  <section class="section section--soft" id="servicos">
     <div class="container">
       <div class="center">
-        <p class="eyebrow reveal"><svg class="em"><use href="#mk"/></svg> Portfólio</p>
+        <p class="eyebrow reveal"><svg class="em"><use href="#mk"></use></svg> Portfólio</p>
         <h2 class="reveal">Tudo que o negócio precisa para se <span class="ital">organizar e crescer</span></h2>
-        <p class="lead measure reveal">Dez frentes que se combinam conforme a sua prioridade. Toda jornada começa pelo diagnóstico, e cada trilha pode entrar sozinha ou dentro de um combo.</p>
+        <p class="lead measure reveal">Trilhas que se combinam conforme a sua prioridade. Toda jornada começa pelo diagnóstico — e cada trilha pode entrar sozinha ou dentro de um combo.</p>
       </div>
       <div class="grid cols-2 cols-3-lg" style="margin-top:46px">
-        <a class="card reveal d1" href="diagnostico-360.html"><div class="bicon"><img src="assets/icons/ic-doc.png" alt="" width="34" height="34"></div><p class="pain">Por onde começar?</p><h3>Diagnóstico 360</h3><p>A leitura completa do negócio que vira plano de prioridades.</p><span class="more">Ver página <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="card reveal d1" href="diagnostico-360.html"><div class="bicon"><img src="assets/icons/ic-doc.png" alt="" width="34" height="34"></div><p class="pain">Por onde começar?</p><h3>Diagnóstico 360</h3><p>A leitura completa do negócio que vira plano de prioridades.</p><span class="more">Ver página <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
         <div class="card reveal d2"><div class="bicon"><img src="assets/icons/ic-waves.png" alt="" width="34" height="34"></div><p class="pain">Caixa e margem sem clareza?</p><h3>Reorganização Financeira</h3><p>Fluxo de caixa, preço, DRE gerencial e indicadores — inclusive leitura de turnaround.</p><span class="soon">Página em breve</span></div>
         <div class="card reveal d3"><div class="bicon"><img src="assets/icons/ic-person.png" alt="" width="34" height="34"></div><p class="pain">Venda no improviso?</p><h3>Posicionamento, Marca e Vendas</h3><p>Oferta clara, proposta de valor, funil e follow-up que convertem.</p><span class="soon">Página em breve</span></div>
         <div class="card reveal d1"><div class="bicon"><img src="assets/icons/ic-folder.png" alt="" width="34" height="34"></div><p class="pain">Preso ao WhatsApp e à planilha?</p><h3>Sistemas Simples de Gestão</h3><p>CRM leve, pedidos, agenda e estoque — um sistema que a empresa opera sozinha.</p><span class="soon">Página em breve</span></div>
@@ -184,50 +199,49 @@
         <div class="card reveal d3"><div class="bicon"><img src="assets/icons/ic-power.png" alt="" width="34" height="34"></div><p class="pain">Tarefa repetitiva, follow-up perdido?</p><h3>Automações e IA Aplicada</h3><p>Gatilhos, integrações e IA copiloto — com revisão humana no que é crítico.</p><span class="soon">Página em breve</span></div>
         <div class="card reveal d1"><div class="bicon"><img src="assets/icons/ic-diamond.png" alt="" width="34" height="34"></div><p class="pain">Crédito caro e no susto?</p><h3>Acesso a Crédito</h3><p>Captar preparado, comparado e sob controle. Não captamos por você; preparamos a conta.</p><span class="soon">Página em breve</span></div>
         <div class="card reveal d2"><div class="bicon"><img src="assets/icons/ic-mail.png" alt="" width="34" height="34"></div><p class="pain">Organizou — e mantém como?</p><h3>Operação Assistida</h3><p>Advisory recorrente ou um profissional da Volto operando uma função dentro da sua empresa.</p><span class="soon">Página em breve</span></div>
-        <div class="card reveal d3"><div class="bicon"><svg style="width:34px;height:34px;color:var(--terracota)"><use href="#mk"/></svg></div><p class="pain">Precisa de mais de uma frente?</p><h3>Combo Personalizável</h3><p>Várias trilhas combinadas em um único plano, na ordem que faz sentido para o negócio.</p><span class="soon">Página em breve</span></div>
+        <div class="card reveal d3"><div class="bicon"><svg style="width:34px;height:34px;color:var(--terracota)"><use href="#mk"></use></svg></div><p class="pain">Precisa de mais de uma frente?</p><h3>Combo Personalizável</h3><p>Várias trilhas combinadas em um único plano, na ordem que faz sentido para o negócio.</p><span class="soon">Página em breve</span></div>
       </div>
       <div class="center reveal" style="margin-top:42px">
-        <div class="btn-row" style="justify-content:center"><a class="btn btn--primary" href="contato.html">Falar sobre qualquer frente</a></div>
+        <div class="btn-row" style="justify-content:center"><a class="btn btn--primary" href="contato.html">Falar sobre a sua prioridade</a></div>
         <p class="form-note" style="margin-top:12px">Há ainda <strong>Projetos Especiais</strong> para desafios fora do padrão. As páginas de cada trilha entram em seguida.</p>
       </div>
     </div>
   </section>
 
-  <!-- PHOTO BAND (slot foto-ready) -->
   <section class="section section--tight">
     <div class="container">
-      <div class="photoband reveal" style="background-image:linear-gradient(rgba(38,40,22,.55),rgba(38,40,22,.74)),url('https://images.unsplash.com/photo-1556745750-68295fefafc5?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;w=1600&amp;q=80');background-size:cover;background-position:center">
+      <div class="photoband reveal" style="background-image:linear-gradient(rgba(38,40,22,.55),rgba(38,40,22,.74)),url('https://images.unsplash.com/photo-1556745750-68295fefafc5?ixlib=rb-4.1.0&auto=format&fit=crop&w=1600&q=80');background-size:cover;background-position:center">
         <div class="pb-inner">
-          <p class="eyebrow" style="justify-content:center;color:var(--dourado)"><svg class="em" style="color:var(--areia)"><use href="#mk"/></svg> Gente que toca negócio de verdade</p>
+          <p class="eyebrow" style="justify-content:center;color:var(--dourado)"><svg class="em" style="color:var(--areia)"><use href="#mk"></use></svg> Gente que toca negócio de verdade</p>
           <p class="h2" style="font-family:var(--font-display);color:#fff;font-weight:600;line-height:1.1">Por trás de cada número, <span class="ital">uma decisão de dono.</span></p>
         </div>
-        <a class="photo-credit" href="https://unsplash.com/@impatrickt?utm_source=volto&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Foto: Patrick Tomasso · Unsplash</a>
+        <a class="photo-credit" href="https://unsplash.com/@impatrickt" target="_blank" rel="noopener noreferrer">Foto: Patrick Tomasso · Unsplash</a>
       </div>
     </div>
   </section>
 
-  <!-- TECNOLOGIA COM GOVERNANÇA -->
   <section class="section section--dark has-estampa">
-    <div class="estampa estampa--wash e-areia" aria-hidden="true"></div>
+    <div class="estampa estampa--wash e-areia estampa--breathe" aria-hidden="true"></div>
     <div class="container">
       <div class="center">
-        <p class="eyebrow reveal"><svg class="em"><use href="#mk"/></svg> Tecnologia com governança</p>
+        <p class="eyebrow reveal"><svg class="em"><use href="#mk"></use></svg> Tecnologia com governança</p>
         <h2 class="reveal">IA e automação <span class="ital" style="color:var(--dourado)">sob controle</span></h2>
         <p class="lead measure reveal">Tecnologia entra como meio, não como enfeite. E com uma régua clara: quanto mais crítica a decisão, mais a pessoa decide.</p>
       </div>
       <div class="grid cols-3" style="margin-top:42px">
-        <div class="card reveal d1"><span class="tag" style="background:var(--verdeagua);color:#eafffa">Verde</span><h3 style="margin-top:14px">Rotina, baixo risco</h3><p>Tarefa repetitiva e reversível: a automação roda sozinha e te devolve tempo.</p></div>
+        <div class="card reveal rl d1"><span class="tag" style="background:var(--verdeagua);color:#eafffa">Verde</span><h3 style="margin-top:14px">Rotina, baixo risco</h3><p>Tarefa repetitiva e reversível: a automação roda sozinha e te devolve tempo.</p></div>
         <div class="card reveal d2"><span class="tag" style="background:var(--dourado);color:#3a2a10">Amarelo</span><h3 style="margin-top:14px">Decisão relevante</h3><p>A IA sugere e organiza; uma pessoa revisa antes de seguir. Velocidade sem perder o leme.</p></div>
-        <div class="card reveal d3"><span class="tag" style="background:#c2502f;color:#fff">Vermelho</span><h3 style="margin-top:14px">Crítico</h3><p>Dinheiro, contrato, cliente: a decisão é sempre humana. A máquina só prepara o terreno.</p></div>
+        <div class="card reveal rr d3"><span class="tag" style="background:#c2502f;color:#fff">Vermelho</span><h3 style="margin-top:14px">Crítico</h3><p>Dinheiro, contrato, cliente: a decisão é sempre humana. A máquina só prepara o terreno.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- MÉTODO -->
-  <section class="section" id="metodo">
+  <div class="estampa-divisor on-areia" aria-hidden="true"></div>
+
+  <section class="section section--alt" id="metodo">
     <div class="container">
       <div class="center">
-        <p class="eyebrow reveal"><svg class="em"><use href="#mk"/></svg> Como trabalhamos</p>
+        <p class="eyebrow reveal"><svg class="em"><use href="#mk"></use></svg> Como trabalhamos</p>
         <h2 class="reveal">Diagnóstico <span class="ital">antes de remédio</span></h2>
         <p class="lead measure reveal">Um caminho em etapas, em ciclos curtos de teste e aprendizado. Sem pular para a solução antes de entender a causa — e sem prender você a um contrato que não precisa.</p>
       </div>
@@ -242,20 +256,19 @@
     </div>
   </section>
 
-  <!-- PARA QUEM É / NÃO É -->
-  <section class="section section--alt">
+  <section class="section">
     <div class="container">
       <div class="grid cols-2" style="align-items:start">
-        <div class="reveal">
-          <p class="eyebrow"><svg class="em"><use href="#mk"/></svg> Para quem é</p>
+        <div class="reveal rl">
+          <p class="eyebrow"><svg class="em"><use href="#mk"></use></svg> Para quem é</p>
           <h2>Faz sentido se…</h2>
           <ul class="flist" style="margin-top:22px">
-            <li><svg class="mk"><use href="#mk"/></svg><span>o dono está engajado e disposto a decidir com base em dado.</span></li>
-            <li><svg class="mk"><use href="#mk"/></svg><span>o negócio já vende e agora precisa de estrutura para crescer.</span></li>
-            <li><svg class="mk"><use href="#mk"/></svg><span>você quer método e clareza, não mais um fornecedor solto.</span></li>
+            <li><svg class="mk"><use href="#mk"></use></svg><span>o dono está engajado e disposto a decidir com base em dado.</span></li>
+            <li><svg class="mk"><use href="#mk"></use></svg><span>o negócio já vende e agora precisa de estrutura para crescer.</span></li>
+            <li><svg class="mk"><use href="#mk"></use></svg><span>você quer método e clareza, não mais um fornecedor solto.</span></li>
           </ul>
         </div>
-        <div class="reveal d2"><div class="notblock has-estampa"><div class="estampa estampa--card e-terra" aria-hidden="true" style="opacity:.06"></div><h3>Não é para…</h3><ul>
+        <div class="reveal rr d2"><div class="notblock has-estampa"><div class="estampa estampa--card e-terra estampa--breathe" aria-hidden="true" style="opacity:.06"></div><h3>Não é para…</h3><ul>
           <li>quem busca fórmula mágica ou resultado da noite para o dia.</li>
           <li>quem não quer se envolver no processo nem abrir os números.</li>
           <li>quem quer apenas "mais posts", sem mexer na raiz do problema.</li>
@@ -264,25 +277,22 @@
     </div>
   </section>
 
-  <!-- BANDA REGIONAL (foto) -->
   <section class="section section--tight">
     <div class="container">
-      <div class="photoband reveal" style="background-image:linear-gradient(rgba(38,40,22,.48),rgba(38,40,22,.66)),url('https://images.unsplash.com/photo-1753161028335-562ae8827d07?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;w=1600&amp;q=80');background-size:cover;background-position:center">
+      <div class="photoband reveal" style="background-image:linear-gradient(rgba(38,40,22,.48),rgba(38,40,22,.66)),url('https://images.unsplash.com/photo-1753161028335-562ae8827d07?ixlib=rb-4.1.0&auto=format&fit=crop&w=1600&q=80');background-size:cover;background-position:center">
         <div class="pb-inner">
-          <p class="eyebrow" style="justify-content:center;color:var(--dourado)"><svg class="em" style="color:var(--areia)"><use href="#mk"/></svg> Feito para os negócios da região</p>
+          <p class="eyebrow" style="justify-content:center;color:var(--dourado)"><svg class="em" style="color:var(--areia)"><use href="#mk"></use></svg> Feito para os negócios da região</p>
           <p class="h2" style="font-family:var(--font-display);color:#fff;font-weight:600;line-height:1.12">Bar, restaurante, hotel ou loja — <span class="ital">a Volto entende o seu balcão.</span></p>
         </div>
-        <a class="photo-credit" href="https://unsplash.com/@silverkblack?utm_source=volto&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Foto: Vitaly Gariev · Unsplash</a>
+        <a class="photo-credit" href="https://unsplash.com/@silverkblack" target="_blank" rel="noopener noreferrer">Foto: Vitaly Gariev · Unsplash</a>
       </div>
     </div>
   </section>
 
-  <!-- PROVA -->
-  <!-- TODO Sérgio: inserir casos e depoimentos reais quando houver. Não usar números/citações fabricados. -->
   <section class="section">
     <div class="container">
       <div class="center">
-        <p class="eyebrow reveal"><svg class="em"><use href="#mk"/></svg> No que você pode confiar</p>
+        <p class="eyebrow reveal"><svg class="em"><use href="#mk"></use></svg> No que você pode confiar</p>
         <h2 class="reveal">Sem promessa de <span class="ital">milagre</span></h2>
         <p class="lead measure reveal">A Volto se sustenta em mecanismo e consequência, não em hype. Três coisas que valem em todo trabalho:</p>
       </div>
@@ -294,34 +304,45 @@
     </div>
   </section>
 
-  <!-- SOBRE -->
-  <section class="section section--soft" id="sobre">
+  <section class="section section--soft">
+    <div class="container">
+      <div class="center"><p class="eyebrow reveal"><svg class="em"><use href="#mk"></use></svg> Perguntas frequentes</p><h2 class="reveal">O que costumam perguntar</h2></div>
+      <div class="faq reveal" style="margin-top:36px">
+        <details><summary>Por onde começa o trabalho com a Volto?</summary><div class="answer">Por uma conversa de triagem de 20 minutos, sem compromisso. Se houver fit, o passo seguinte costuma ser o Diagnóstico 360 — a leitura que vira o seu plano de prioridades.</div></details>
+        <details><summary>Preciso contratar várias frentes de uma vez?</summary><div class="answer">Não. Cada trilha pode entrar sozinha ou dentro de um combo, na ordem que faz sentido para o negócio. O diagnóstico ajuda justamente a decidir por onde começar.</div></details>
+        <details><summary>A Volto atende a minha região?</summary><div class="answer">Sim. A base é em Goiânia, com atuação em Caldas Novas e região — presencial quando faz diferença e remoto no que dá, sem perder a proximidade.</div></details>
+        <details><summary>Vocês prometem um resultado específico?</summary><div class="answer">Não trabalhamos com promessa de milagre. A Volto se sustenta em mecanismo e consequência: diagnóstico antes de remédio, e um plano que só vira resultado quando roda.</div></details>
+        <details><summary>A Volto substitui meu contador ou meu time?</summary><div class="answer">Não. Cuidamos da gestão e integramos com a contabilidade e com quem já está na operação — sem repassar para camadas que não conhecem o seu negócio.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sobre">
     <div class="container">
       <div class="grid cols-2" style="align-items:center">
-        <div class="reveal">
-          <p class="eyebrow"><svg class="em"><use href="#mk"/></svg> Quem é a Volto</p>
+        <div class="reveal rl">
+          <p class="eyebrow"><svg class="em"><use href="#mk"></use></svg> Quem é a Volto</p>
           <h2>Enxuta e integrada, <span class="ital">por escolha</span></h2>
           <p class="lead">A Volto reúne finanças, posicionamento e tecnologia em um time próximo. Não fingimos ser maiores do que somos — é isso que mantém o trabalho direto, sem repasse para camadas que não conhecem o seu negócio.</p>
           <p style="color:var(--text-soft);margin-top:16px">Sérgio, Bianca e Johnes conduzem as frentes de estratégia e finanças, formulários e proposta, e sistemas e implantação.</p>
         </div>
-        <div class="reveal d2"><div class="card has-estampa" style="text-align:center;padding:52px 28px;background:var(--paper)">
-          <div class="estampa estampa--card e-geo-terra" aria-hidden="true" style="opacity:.16"></div>
-          <svg style="width:72px;height:72px;color:var(--terracota);margin:0 auto 18px"><use href="#mk"/></svg>
+        <div class="reveal rr d2"><div class="card has-estampa" style="text-align:center;padding:52px 28px;background:var(--paper)">
+          <div class="estampa estampa--card e-geo-terra estampa--breathe" aria-hidden="true" style="opacity:.16"></div>
+          <svg style="width:72px;height:72px;color:var(--terracota);margin:0 auto 18px"><use href="#mk"></use></svg>
           <p style="font-family:var(--font-display);color:var(--terracota);font-size:1.5rem;font-weight:600;font-style:italic">"Clareza para dar o próximo passo."</p>
         </div></div>
       </div>
     </div>
   </section>
 
-  <!-- CTA FINAL -->
   <section class="section section--tight">
     <div class="container">
-      <div class="cta-band reveal" style="background-image:linear-gradient(rgba(122,42,18,.82),rgba(122,42,18,.87)),url('https://images.unsplash.com/photo-1730367019960-9906d9cbbf05?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;w=1600&amp;q=80');background-size:cover;background-position:center">
-        <svg class="wm"><use href="#mk"/></svg>
+      <div class="cta-band reveal" style="background-image:linear-gradient(rgba(122,42,18,.82),rgba(122,42,18,.87)),url('https://images.unsplash.com/photo-1730367019960-9906d9cbbf05?ixlib=rb-4.1.0&auto=format&fit=crop&w=1600&q=80');background-size:cover;background-position:center">
+        <svg class="wm"><use href="#mk"></use></svg>
         <h2>Vamos dar o próximo passo <span class="ital" style="color:#ffe6cf">com clareza?</span></h2>
         <p>Uma conversa de 20 minutos, sem compromisso, para entender se a Volto pode ajudar o seu negócio.</p>
         <div class="btn-row" style="justify-content:center"><a class="btn btn--on-dark btn--lg" href="contato.html">Agendar conversa de triagem</a></div>
-        <a class="photo-credit" href="https://unsplash.com/@nereiq?utm_source=volto&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Foto: Nereid Ndreu · Unsplash</a>
+        <a class="photo-credit" href="https://unsplash.com/@nereiq" target="_blank" rel="noopener noreferrer">Foto: Nereid Ndreu · Unsplash</a>
       </div>
     </div>
   </section>
@@ -338,9 +359,9 @@
       </div>
       <div><h4>Navegar</h4><ul class="footer-links">
         <li><a href="diagnostico-360.html">Diagnóstico 360</a></li>
-        <li><a href="index.html#servicos">Serviços</a></li>
-        <li><a href="index.html#metodo">Método</a></li>
-        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#metodo">Método</a></li>
+        <li><a href="#sobre">Sobre</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul></div>
       <div><h4>Contato</h4><ul class="footer-links">
@@ -358,21 +379,71 @@
 </footer>
 
 <a class="wa-float" href="https://wa.me/5564992686208?text=Ol%C3%A1%2C%20quero%20entender%20se%20a%20Volto%20pode%20ajudar%20meu%20neg%C3%B3cio%20a%20se%20organizar%20e%20crescer%20com%20mais%20estrutura." aria-label="Falar no WhatsApp">
-  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.01c-.24.68-1.42 1.3-1.96 1.34-.5.05-1.14.24-3.69-.77-3.11-1.23-5.1-4.39-5.25-4.59-.15-.2-1.26-1.68-1.26-3.2 0-1.52.8-2.27 1.08-2.58.28-.31.61-.39.81-.39.2 0 .41 0 .58.01.19.01.44-.07.69.53.24.6.83 2.07.9 2.22.07.15.12.33.02.53-.1.2-.15.33-.3.5-.15.18-.31.39-.45.53-.15.15-.31.31-.13.6.17.29.76 1.25 1.63 2.03 1.12 1 2.07 1.31 2.36 1.46.29.15.46.12.63-.07.17-.2.73-.85.92-1.14.2-.29.39-.24.66-.15.27.1 1.71.81 2 .96.29.15.49.22.56.34.07.12.07.68-.17 1.36z"/></svg>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.01c-.24.68-1.42 1.3-1.96 1.34-.5.05-1.14.24-3.69-.77-3.11-1.23-5.1-4.39-5.25-4.59-.15-.2-1.26-1.68-1.26-3.2 0-1.52.8-2.27 1.08-2.58.28-.31.61-.39.81-.39.2 0 .41 0 .58.01.19.01.44-.07.69.53.24.6.83 2.07.9 2.22.07.15.12.33.02.53-.1.2-.15.33-.3.5-.15.18-.31.39-.45.53-.15.15-.31.31-.13.6.17.29.76 1.25 1.63 2.03 1.12 1 2.07 1.31 2.36 1.46.29.15.46.12.63-.07.17-.2.73-.85.92-1.14.2-.29.39-.24.66-.15.27.1 1.71.81 2 .96.29.15.49.22.56.34.07.12.07.68-.17 1.36z"></path></svg>
   <span class="lbl">Falar no WhatsApp</span>
 </a>
 
 <script>
-(function(){
-  var t=document.querySelector('.nav-toggle'),m=document.getElementById('mm');
-  if(t&&m){t.addEventListener('click',function(){var o=m.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');t.setAttribute('aria-label',o?'Fechar menu':'Abrir menu');});
-    m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');t.setAttribute('aria-expanded','false');});});}
-  var h=document.getElementById('hdr');addEventListener('scroll',function(){h.classList.toggle('scrolled',scrollY>8);},{passive:true});
-  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches,els=document.querySelectorAll('.reveal');
-  if(rm||!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in');});}
-  else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{rootMargin:'0px 0px -10% 0px',threshold:.12});els.forEach(function(e){io.observe(e);});}
-  var mq=document.getElementById('mq');if(mq){mq.innerHTML+=mq.innerHTML;}
-})();
+(function(){    try{
+      var t=document.querySelector('.nav-toggle'), m=document.getElementById('mm');
+      if(t&&m){
+        t.addEventListener('click',function(){var o=m.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');t.setAttribute('aria-label',o?'Fechar menu':'Abrir menu');});
+        m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');t.setAttribute('aria-expanded','false');});});
+      }
+      var h=document.getElementById('hdr');
+      if(h){window.addEventListener('scroll',function(){h.classList.toggle('scrolled',window.scrollY>8);},{passive:true});}
+      var rm=matchMedia('(prefers-reduced-motion: reduce)').matches, els=document.querySelectorAll('.reveal');
+      if(rm||!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in');});}
+      else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{rootMargin:'0px 0px -10% 0px',threshold:.12});els.forEach(function(e){io.observe(e);});}
+      var mq=document.getElementById('mq'); if(mq&&!mq.dataset.dup){mq.dataset.dup='1';mq.innerHTML+=mq.innerHTML;}
+
+      // HERO A — frentes explorer
+      var ex=document.getElementById('frEx');
+      if(ex){
+        var chips=ex.querySelectorAll('.fx-chip'), panels=ex.querySelectorAll('.fx-panel'), KS=['fin','mkt','ops','assist'];
+        var FC={fin:'#963417',mkt:'#618981',ops:'#b9772e',assist:'#3C3F20'};
+        function sel(fr){
+          ex.style.setProperty('--fc',FC[fr]);
+          KS.forEach(function(k){ex.classList.toggle('is-'+k,k===fr);});
+          chips.forEach(function(c){c.classList.toggle('on',c.getAttribute('data-fr')===fr);});
+          panels.forEach(function(p){p.classList.toggle('on',p.getAttribute('data-fr')===fr);});
+        }
+        chips.forEach(function(c){var fr=c.getAttribute('data-fr');
+          c.addEventListener('mouseenter',function(){sel(fr);});
+          c.addEventListener('focus',function(){sel(fr);});
+          c.addEventListener('click',function(){sel(fr);});
+        });
+      }
+
+      // count-up dos números (com rede de segurança se o clock estiver parado)
+      function countUp(el){
+        if(el.dataset.counted)return; el.dataset.counted='1';
+        var target=+el.getAttribute('data-count'), dur=1100, start=null;
+        if(rm){el.firstChild.nodeValue=String(target);return;}
+        function step(ts){if(start===null)start=ts;var p=Math.min((ts-start)/dur,1);el.firstChild.nodeValue=String(Math.round(target*p));if(p<1)requestAnimationFrame(step);}
+        el.firstChild.nodeValue='0'; requestAnimationFrame(step);
+        setTimeout(function(){el.firstChild.nodeValue=String(target);},1500);
+      }
+      var sg=document.querySelector('.statgrid');
+      if(sg){
+        if(rm||!('IntersectionObserver'in window)){sg.querySelectorAll('.num[data-count]').forEach(countUp);}
+        else{var io2=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.querySelectorAll('.num[data-count]').forEach(countUp);io2.unobserve(x.target);}});},{threshold:.4});io2.observe(sg);}
+      }
+
+      // Rede de segurança: se o relógio de animação estiver congelado, revela tudo
+      setTimeout(function(){
+        try{
+          var probe=document.querySelector('.fu'); var frozen=true;
+          if(probe&&probe.getAnimations){var a=probe.getAnimations()[0]; if(!a||a.currentTime>0) frozen=false;}
+          if(frozen){
+            document.querySelectorAll('.fu, .reveal').forEach(function(e){e.style.opacity='1';e.style.transform='none';e.style.animation='none';e.style.transition='none';e.classList.add('in');});
+            document.querySelectorAll('.fx-panel.on, .ftab-panel.on').forEach(function(e){e.style.opacity='1';e.style.transform='none';e.style.transition='none';});
+            document.querySelectorAll('.num[data-count]').forEach(function(e){e.firstChild.nodeValue=e.getAttribute('data-count');});
+          }
+        }catch(e){}
+      },1300);
+    }catch(e){console.error('volto',e);}
+  })();
 </script>
 </body>
 </html>
