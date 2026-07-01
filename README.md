@@ -7,6 +7,11 @@ Site institucional estático da Volto — hub de estruturação para empresas em
 site/                      raiz do deploy (index.html na raiz)
 ├── index.html             Home
 ├── diagnostico-360.html   Diagnóstico 360 (porta de entrada)
+├── servicos.html          Hub de serviços
+├── reorganizacao-financeira.html · posicionamento-marca-vendas.html
+├── sistemas-de-gestao.html · sites-operaveis.html · automacoes-e-ia.html
+├── acesso-a-credito.html · operacao-assistida.html · combo-projetos-especiais.html
+├── metodo.html · sobre.html · privacidade.html
 ├── contato.html           Triagem (form → WhatsApp) + contatos
 ├── css/volto-site.css     Sistema visual + animações
 ├── assets/                logo/monograma vetoriais, ícones, estampas, favicon
@@ -28,4 +33,4 @@ Fotos reais da Unsplash por hotlink, com crédito ao fotógrafo em cada faixa (r
 Sem preços · público sempre "empresas em crescimento" (nunca "pequenos negócios") · identidade visual nunca do zero (sempre arquivos LARTS) · prova sem casos inventados.
 
 ## Próximos passos
-Páginas de trilha e /metodo, /sobre · casos/depoimentos reais · imagem Open Graph (1200×630) · trocar para Argent CF quando licenciada.
+Deploy em produção (Cloudflare Pages → voltoconsultoria.com.br) · casos/depoimentos reais · imagem Open Graph (1200×630) · licenciar e trocar para Argent CF. *(Páginas de trilha, /metodo e /sobre já construídas — jun/2026.)*
