@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Para contadores — parceria Volto</title>
-<meta name="description" content="Você cuida do fiscal; a Volto organiza o gerencial do seu cliente — e você recebe comissão recorrente por indicar: 10% ao mês, por 12 meses, sobre Ritmo e BPO.">
+<meta name="description" content="Você cuida do fiscal; a Volto organiza o gerencial do seu cliente — e você recebe comissão por indicar. Como parceiro credenciado, 10% ao mês por 12 meses sobre Ritmo e BPO.">
 <link rel="canonical" href="https://voltoconsultoria.com.br/para-contadores">
 <meta name="theme-color" content="#963417">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -90,7 +90,7 @@
     <div class="container">
       <p class="eyebrow fu f1"><svg class="em"><use href="#mk"></use></svg> Canal de parceria · contadores</p>
       <h1 class="display measure fu f2">Seu cliente organizado, <span class="ital">sua receita recorrente</span></h1>
-      <p class="lead measure fu f3" style="margin-top:10px">Você cuida do fiscal. A Volto organiza o gerencial — sistema, fechamento e leitura mensal — e você recebe por indicar: 10% ao mês, por 12 meses, sobre a recorrência dos clientes indicados.</p>
+      <p class="lead measure fu f3" style="margin-top:10px">Você cuida do fiscal. A Volto organiza o gerencial — sistema, fechamento e leitura mensal — e você recebe por indicar. Como parceiro credenciado, são 10% ao mês por 12 meses sobre a recorrência dos clientes indicados; a indicação avulsa também é remunerada.</p>
       <div class="btn-row fu f4" style="margin-top:32px">
         <a class="btn btn--primary btn--lg" href="#parceria">Quero ser parceiro <svg class="arw" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
         <a class="btn btn--secondary btn--lg" href="#comissao">Ver o comissionamento</a>
@@ -206,11 +206,13 @@
         </form>
         </div>
         <div id="contador-ok" class="card" hidden>
-          <p class="eyebrow"><svg class="em"><use href="#mk"></use></svg> Recebido</p>
-          <h3 style="margin-top:10px">Obrigado — retornamos em até um dia útil</h3>
-          <p style="color:var(--text-soft);margin-top:10px">Enviaremos o termo de parceria e os materiais de apresentação pelo WhatsApp informado.</p>
-          <div class="btn-row" style="margin-top:18px" hidden>
-            <a id="contador-whats" class="btn btn--secondary" href="#">Enviar também pelo WhatsApp</a>
+          <p class="eyebrow"><svg class="em"><use href="#mk"></use></svg> <span id="contador-eyebrow">Recebido</span></p>
+          <h3 id="contador-titulo" style="margin-top:10px">Obrigado — retornamos em até um dia útil</h3>
+          <p id="contador-texto" style="color:var(--text-soft);margin-top:10px">Enviaremos o termo de parceria e os materiais de apresentação pelo WhatsApp informado.</p>
+          <div class="btn-row" id="contador-cta" style="margin-top:18px" hidden>
+            <a id="contador-whats" class="btn btn--primary btn--lg" href="#">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2z"></path></svg>
+              Enviar meus dados pelo WhatsApp</a>
           </div>
         </div>
       </div>
@@ -308,14 +310,28 @@
     if(!f.checkValidity()){f.reportValidity();return;}
     if(f.elements['_gotcha']&&f.elements['_gotcha'].value)return;
     function v(n){var el=f.elements[n];return el&&el.value?el.value.trim():'';}
+    var btn=f.querySelector('button[type="submit"]');
+    if(btn){if(btn.disabled)return; btn.disabled=true; btn.dataset.rotulo=btn.textContent; btn.textContent='Enviando…';}
+    function txt(id,val){var el=document.getElementById(id); if(el)el.textContent=val;}
     var payload={origem:'site-v3/para-contadores',tag:'canal-contador',nome:v('nome'),escritorio:v('escritorio'),cidade:v('cidade'),clientes_pj:v('clientes_pj')||'nao-informado',whatsapp:v('whatsapp')};
     var linhas=['Olá! Sou contador e quero conhecer a parceria da Volto.','','Nome: '+payload.nome,'Escritório: '+payload.escritorio,'Cidade: '+payload.cidade,'Clientes PJ: '+payload.clientes_pj,'WhatsApp: '+payload.whatsapp];
     var zap='https://wa.me/'+CFG.whatsapp+'?text='+encodeURIComponent(linhas.join('\n'));
     var done=function(entregue){
       document.getElementById('painel-form-contador').hidden=true;
       var ok=document.getElementById('contador-ok'); ok.hidden=false;
-      var b=document.getElementById('contador-whats');
-      if(b){b.href=zap; var row=b.closest('.btn-row'); if(row) row.hidden=!!entregue;}
+      var b=document.getElementById('contador-whats'); if(b)b.href=zap;
+      var cta=document.getElementById('contador-cta');
+      if(entregue){
+        txt('contador-eyebrow','Recebido');
+        txt('contador-titulo','Obrigado — retornamos em até um dia útil');
+        txt('contador-texto','Enviaremos o termo de parceria e os materiais de apresentação pelo WhatsApp informado.');
+        if(cta)cta.hidden=true;
+      } else {
+        txt('contador-eyebrow','Falta um passo');
+        txt('contador-titulo','Só falta enviar seus dados');
+        txt('contador-texto','Toque no botão abaixo para enviar o que você preencheu pelo WhatsApp — a mensagem já vai pronta. Retornamos em até um dia útil com o termo de parceria e os materiais.');
+        if(cta)cta.hidden=false;
+      }
       if(ok.scrollIntoView)ok.scrollIntoView({behavior:'smooth',block:'start'});
     };
     if(CFG.endpoint){

@@ -11,8 +11,12 @@ site/                      raiz do deploy (index.html na raiz)
 ├── reorganizacao-financeira.html · posicionamento-marca-vendas.html
 ├── sistemas-de-gestao.html · sites-operaveis.html · automacoes-e-ia.html
 ├── acesso-a-credito.html · operacao-assistida.html · combo-projetos-especiais.html
+├── ritmo.html · bpo-financeiro.html   Recorrência (Ritmo é o carro-chefe)
+├── para-contadores.html   Landing do canal de contadores (fora do menu)
 ├── metodo.html · sobre.html · privacidade.html
-├── contato.html           Triagem (form → WhatsApp) + contatos
+├── contato.html           Formulário direcionador com score e desfecho condicional
+├── js/triagem.js          Motor do formulário (score → Cal.com ou retorno 4h)
+├── js/score-config.json   Calibragem do score + endpoint + Cal.com (sem rebuild)
 ├── css/volto-site.css     Sistema visual + animações
 ├── assets/                logo/monograma vetoriais, ícones, estampas, favicon
 ├── llms.txt · robots.txt · sitemap.xml

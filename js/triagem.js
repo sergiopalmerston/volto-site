@@ -1,7 +1,8 @@
 /* Volto — formulário direcionador com score e desfecho condicional (site v3).
    Calibragem em js/score-config.json (pesos, régua de lead quente, endpoint, Cal.com).
-   Sem endpoint configurado, o envio segue pelo WhatsApp; sem Cal.com, o desfecho
-   quente também cai no WhatsApp com mensagem pronta. */
+   Sem endpoint configurado, o envio depende do WhatsApp e a interface diz isso
+   com clareza (não afirma "recebido" antes de o lead chegar de fato à Volto).
+   Sem Cal.com, o desfecho quente também cai no WhatsApp com mensagem pronta. */
 (function () {
   'use strict';
 
@@ -29,10 +30,42 @@
     }
   };
 
+  // Rótulos legíveis para a mensagem do WhatsApp (o dono vê o texto antes de enviar).
+  var LABELS = {
+    area: {
+      'financeiro': 'Organizar o dinheiro / lucro', 'vendas': 'Vender mais', 'operacao': 'Rotina, processos e equipe',
+      'sistema': 'Sistema para o dia a dia', 'marca': 'Marca / identidade', 'site': 'Site ou página',
+      'automacao': 'Automatizar tarefas', 'nao-sei': 'Não sei dizer'
+    },
+    controle: { 'caderno': 'caderno / papel', 'planilha': 'planilha', 'whatsapp': 'WhatsApp', 'sistema': 'um sistema', 'memoria': 'na memória', 'equipe': 'a equipe resolve', 'outro': 'outro' },
+    porte: { 'so-eu': 'só eu', '2-5': '2 a 5 pessoas', '6-10': '6 a 10 pessoas', '11-25': '11 a 25 pessoas', '26-mais': '26 ou mais' },
+    inicio: { 'agora': 'agora', '30-dias': 'nos próximos 30 dias', '60-dias': 'em 60 dias', 'sem-pressa': 'sem pressa' }
+  };
+  function lbl(campo, v) { return (LABELS[campo] && LABELS[campo][v]) || v; }
+
+  // merge raso das seções conhecidas: JSON parcial não zera as demais chaves nem quebra o submit
+  function mergeCfg(j) {
+    if (!j || typeof j !== 'object') return DEFAULTS;
+    var c = {
+      endpoint: typeof j.endpoint === 'string' ? j.endpoint : DEFAULTS.endpoint,
+      cal: (j.cal && typeof j.cal === 'object') ? { link: j.cal.link || '' } : DEFAULTS.cal,
+      whatsapp: j.whatsapp || DEFAULTS.whatsapp,
+      retornoHorasUteis: j.retornoHorasUteis || DEFAULTS.retornoHorasUteis,
+      pesos: {},
+      quente: Object.assign({}, DEFAULTS.quente, j.quente || {}),
+      trilhas: Object.assign({}, DEFAULTS.trilhas, j.trilhas || {})
+    };
+    var jp = j.pesos || {};
+    ['urgencia', 'orcamento', 'porte', 'faturamento'].forEach(function (k) {
+      c.pesos[k] = Object.assign({}, DEFAULTS.pesos[k], jp[k] || {});
+    });
+    return c;
+  }
+
   var cfg = DEFAULTS;
   fetch('js/score-config.json', { cache: 'no-cache' })
     .then(function (r) { return r.ok ? r.json() : null; })
-    .then(function (j) { if (j && j.pesos) cfg = j; })
+    .then(function (j) { cfg = mergeCfg(j); })
     .catch(function () { /* mantém defaults embutidos */ });
 
   function val(form, name) {
@@ -86,11 +119,11 @@
       'Olá! Preenchi o formulário no site da Volto.',
       '',
       'Nome: ' + p.nome,
-      'Área mais urgente: ' + p.area,
+      'Área mais urgente: ' + lbl('area', p.area),
       'Problema: ' + p.problema,
-      'Como controla hoje: ' + p.controle,
-      'Tamanho: ' + p.porte,
-      'Quando quer começar: ' + p.inicio,
+      'Como controla hoje: ' + lbl('controle', p.controle),
+      'Tamanho: ' + lbl('porte', p.porte),
+      'Quando quer começar: ' + lbl('inicio', p.inicio),
       p.desfecho === 'quente-agendamento' ? 'Quero agendar a triagem de 20 minutos.' : 'Aguardo o retorno de vocês.'
     ];
     return 'https://wa.me/' + cfg.whatsapp + '?text=' + encodeURIComponent(linhas.join('\n'));
@@ -114,6 +147,7 @@
 
   function esconde(el) { if (el) el.hidden = true; }
   function mostra(el) { if (el) el.hidden = false; }
+  function txt(id, v) { var el = document.getElementById(id); if (el) el.textContent = v; }
 
   function init() {
     var form = document.getElementById('triagem');
@@ -131,11 +165,11 @@
       var r = calcula(form);
       var trilha = trilhaDe(form);
       var payload = montaPayload(form, r, trilha);
+      var linkZap = textoWhats(payload);
       var btn = form.querySelector('button[type="submit"]');
       if (btn) { btn.disabled = true; btn.dataset.rotulo = btn.textContent; btn.textContent = 'Enviando…'; }
 
       enviaEndpoint(payload).then(function (entregue) {
-        var linkZap = textoWhats(payload);
         if (r.quente) {
           esconde(painelForm); mostra(painelQuente);
           var calBox = document.getElementById('cal-inline');
@@ -148,22 +182,25 @@
             esconde(calBox);
             if (zapBox) { zapBox.href = linkZap; mostra(zapBox); }
           }
-          if (!entregue && !cfg.endpoint && zapBox && cfg.cal && cfg.cal.link) {
-            // sem endpoint, o registro do lead depende do WhatsApp ou do próprio Cal.com
-            zapBox.href = linkZap;
-          }
         } else {
           esconde(painelForm); mostra(painelRetorno);
           var canal = val(form, 'canal') === 'email' ? 'e-mail' : 'WhatsApp';
-          var slot = document.getElementById('retorno-canal');
-          if (slot) slot.textContent = canal;
-          var horas = document.getElementById('retorno-horas');
-          if (horas) horas.textContent = String(cfg.retornoHorasUteis || 4);
+          var horas = String(cfg.retornoHorasUteis || 4);
           var zap = document.getElementById('retorno-whats');
-          if (zap) {
-            zap.href = linkZap;
-            // sem endpoint configurado, o envio pelo WhatsApp é o que registra o lead
-            if (!entregue) mostra(zap.closest('.btn-row') || zap); else esconde(zap.closest('.btn-row') || zap);
+          var cta = document.getElementById('retorno-cta');
+          if (zap) zap.href = linkZap;
+          if (entregue) {
+            // endpoint confirmou o recebimento: o lead já está com a Volto
+            txt('retorno-eyebrow', 'Recebido');
+            txt('retorno-titulo', 'Obrigado — suas respostas chegaram');
+            txt('retorno-texto', 'Retornamos em até ' + horas + ' horas úteis pelo ' + canal + ', já com uma leitura inicial do seu caso e o caminho sugerido.');
+            esconde(cta);
+          } else {
+            // sem endpoint (ou falha): o envio pelo WhatsApp é o que faz o lead chegar
+            txt('retorno-eyebrow', 'Falta um passo');
+            txt('retorno-titulo', 'Só falta enviar suas respostas');
+            txt('retorno-texto', 'Toque no botão abaixo para enviar o que você preencheu pelo WhatsApp — a mensagem já vai pronta. Assim retornamos em até ' + horas + ' horas úteis com uma leitura inicial do seu caso.');
+            mostra(cta);
           }
         }
         var topo = r.quente ? painelQuente : painelRetorno;
