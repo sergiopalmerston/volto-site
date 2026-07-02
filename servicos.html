@@ -52,7 +52,15 @@
     <a class="brand" href="/" aria-label="Volto — início"><img class="logo" src="assets/logo-horizontal-terracota.png" alt="Volto" width="132" height="30"></a>
     <nav class="nav" aria-label="Navegação principal">
       <a href="diagnostico-360">Diagnóstico 360</a>
-      <a href="servicos" aria-current="page">Serviços</a>
+      <div class="nav-drop">
+        <a href="servicos" aria-current="page">Serviços <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></a>
+        <div class="dd"><div class="dd-in">
+          <a href="servicos">Todos os serviços</a>
+          <div class="dd-sep" role="presentation"></div>
+          <a href="ritmo">Ritmo — fechamento mensal</a>
+          <a href="bpo-financeiro">BPO Financeiro</a>
+        </div></div>
+      </div>
       <a href="metodo">Método</a>
       <a href="sobre">Sobre</a>
     </nav>
@@ -64,6 +72,8 @@
   <div class="mobile-menu" id="mm"><div class="container">
     <a href="diagnostico-360">Diagnóstico 360</a>
     <a href="servicos" aria-current="page">Serviços</a>
+    <a class="mm-sub" href="ritmo">Ritmo — fechamento mensal</a>
+    <a class="mm-sub" href="bpo-financeiro">BPO Financeiro</a>
     <a href="metodo">Método</a>
     <a href="sobre">Sobre</a>
     <a class="btn btn--primary" href="contato">Falar com a Volto</a>
@@ -74,9 +84,9 @@
 <section class="hero section--tight">
     <div class="hero-texture" aria-hidden="true"></div>
     <div class="container">
-      <p class="eyebrow fu f1"><svg class="em"><use href="#mk"></use></svg> Serviços · as oito trilhas</p>
+      <p class="eyebrow fu f1"><svg class="em"><use href="#mk"></use></svg> Serviços · quatro planos, oito trilhas</p>
       <h1 class="display measure fu f2">Tudo que o negócio precisa para se <span class="ital">organizar e crescer</span>, em um só lugar</h1>
-      <p class="lead measure fu f3" style="margin-top:10px">Finanças, marca e vendas, operação e camada digital — trilhas que entram sozinhas ou combinadas, sempre a partir de um diagnóstico que diz por onde começar.</p>
+      <p class="lead measure fu f3" style="margin-top:10px">Quatro planos — finanças, posicionamento, operação e camada digital — executados por oito trilhas que entram sozinhas ou combinadas, sempre a partir de um diagnóstico que diz por onde começar.</p>
       <div class="btn-row fu f4" style="margin-top:32px">
         <a class="btn btn--primary btn--lg" href="contato">Agendar triagem gratuita de 20 minutos <svg class="arw" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
         <a class="btn btn--secondary btn--lg" href="#como">Como escolher</a>
@@ -101,20 +111,68 @@
   <section class="section">
     <div class="container">
       <div class="center">
-        <p class="eyebrow reveal"><svg class="em"><use href="#mk"></use></svg> As trilhas</p>
-        <h2 class="reveal">Escolha dar o primeiro passo, <span class="ital">comece pelo diagnóstico</span></h2>
-        <p class="lead measure reveal">O Diagnóstico 360 é o primeiro passo. A partir dele, cada trilha entra sozinha ou dentro de um combo faseado.</p>
+        <p class="eyebrow reveal"><svg class="em"><use href="#mk"></use></svg> O primeiro passo</p>
+        <h2 class="reveal">Toda jornada começa <span class="ital">pelo diagnóstico</span></h2>
       </div>
-      <div class="grid cols-2 cols-3-lg" style="margin-top:46px">
-        <a class="card reveal d1" href="diagnostico-360"><div class="bicon"><img loading="lazy" decoding="async" src="assets/icons/ic-doc.png" alt="" width="34" height="34"></div><p class="pain">Por onde começar?</p><h3>Diagnóstico 360</h3><p>A leitura completa do negócio — finanças, vendas, operação e tecnologia — que vira um plano de prioridades.</p><span class="more">Ver página <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
-        <a class="card reveal d2" href="reorganizacao-financeira"><div class="bicon"><img loading="lazy" decoding="async" src="assets/icons/ic-waves.png" alt="" width="34" height="34"></div><p class="pain">Caixa e margem sem clareza?</p><h3>Reorganização Financeira</h3><p>Fluxo de caixa, preço, DRE gerencial e indicadores que guiam a decisão.</p><span class="more">Ver página <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
-        <a class="card reveal d3" href="posicionamento-marca-vendas"><div class="bicon"><img loading="lazy" decoding="async" src="assets/icons/ic-person.png" alt="" width="34" height="34"></div><p class="pain">Venda no improviso?</p><h3>Posicionamento, Marca e Vendas</h3><p>Oferta clara, proposta de valor, mensagens e funil com follow-up que ajudam o cliente a decidir.</p><span class="more">Ver página <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+      <div class="grid" style="margin-top:40px;max-width:560px;margin-inline:auto">
+        <a class="card reveal d1" href="diagnostico-360"><div class="bicon"><img loading="lazy" decoding="async" src="assets/icons/ic-doc.png" alt="" width="34" height="34"></div><p class="pain">Por onde começar?</p><h3>Diagnóstico 360</h3><p>A leitura completa do negócio — finanças, vendas, operação e tecnologia — que vira um plano de prioridades. É o primeiro passo de toda jornada.</p><span class="more">Ver página <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft" id="financas">
+    <div class="container">
+      <p class="eyebrow reveal"><svg class="em"><use href="#mk"></use></svg> Plano 1 · Finanças e gestão</p>
+      <h2 class="measure reveal">Clareza econômica <span class="ital">e disciplina</span></h2>
+      <div class="grid cols-2" style="margin-top:36px">
+        <a class="card reveal d1" href="reorganizacao-financeira"><div class="bicon"><img loading="lazy" decoding="async" src="assets/icons/ic-waves.png" alt="" width="34" height="34"></div><p class="pain">Caixa e margem sem clareza?</p><h3>Reorganização Financeira</h3><p>Fluxo de caixa, preço, DRE gerencial e indicadores que guiam a decisão.</p><span class="more">Ver página <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+        <a class="card reveal d2" href="acesso-a-credito"><div class="bicon"><img loading="lazy" decoding="async" src="assets/icons/ic-diamond.png" alt="" width="34" height="34"></div><p class="pain">Crédito caro e no susto?</p><h3>Acesso a Crédito</h3><p>Captar preparado, comparado e sob controle. Acompanhamos da preparação à resposta do banco — a aprovação é da instituição.</p><span class="more">Ver página <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="posicionamento">
+    <div class="container">
+      <p class="eyebrow reveal"><svg class="em"><use href="#mk"></use></svg> Plano 2 · Posicionamento e vendas</p>
+      <h2 class="measure reveal">Mensagem que chega <span class="ital">e que vende</span></h2>
+      <div class="grid cols-2" style="margin-top:36px">
+        <a class="card reveal d1" href="posicionamento-marca-vendas"><div class="bicon"><img loading="lazy" decoding="async" src="assets/icons/ic-person.png" alt="" width="34" height="34"></div><p class="pain">Venda no improviso?</p><h3>Posicionamento, Marca e Vendas</h3><p>Oferta clara, proposta de valor, mensagens e funil com follow-up que ajudam o cliente a decidir.</p><span class="more">Ver página <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft" id="operacao">
+    <div class="container">
+      <p class="eyebrow reveal"><svg class="em"><use href="#mk"></use></svg> Plano 3 · Operação mínima</p>
+      <h2 class="measure reveal">Menos improviso, <span class="ital">mais previsibilidade</span></h2>
+      <p class="lead measure reveal" style="margin-top:14px">Papéis, checklists, cadência e treinamento entram dentro das sprints das demais trilhas — e, quando a dor é pontual, viram projeto próprio.</p>
+      <div class="grid cols-2" style="margin-top:36px">
+        <a class="card reveal d2" href="combo-projetos-especiais"><div class="bicon"><img loading="lazy" decoding="async" src="assets/icons/ic-doc.png" alt="" width="34" height="34"></div><p class="pain">Dor pontual ou em várias frentes?</p><h3>Combo e Projetos Especiais</h3><p>Processos, treinamento e temas pontuais de alto impacto — várias trilhas em um plano faseado ou um projeto sob medida.</p><span class="more">Ver página <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="digital">
+    <div class="container">
+      <p class="eyebrow reveal"><svg class="em"><use href="#mk"></use></svg> Plano 4 · Operação digital</p>
+      <h2 class="measure reveal">Escala operacional <span class="ital">com baixo atrito</span></h2>
+      <div class="grid cols-2 cols-3-lg" style="margin-top:36px">
         <a class="card reveal d1" href="sistemas-de-gestao"><div class="bicon"><img loading="lazy" decoding="async" src="assets/icons/ic-folder.png" alt="" width="34" height="34"></div><p class="pain">Preso ao WhatsApp e à planilha?</p><h3>Sistemas Simples de Gestão</h3><p>Pedidos, clientes, agenda e estoque em um sistema leve, operável e proporcional ao negócio.</p><span class="more">Ver página <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
         <a class="card reveal d2" href="sites-operaveis"><div class="bicon"><img loading="lazy" decoding="async" src="assets/icons/ic-screen.png" alt="" width="34" height="34"></div><p class="pain">Site que não capta?</p><h3>Sites Operáveis</h3><p>Uma presença digital que traz cliente e que você mesmo atualiza, sem depender de ninguém.</p><span class="more">Ver página <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
         <a class="card reveal d3" href="automacoes-e-ia"><div class="bicon"><img loading="lazy" decoding="async" src="assets/icons/ic-power.png" alt="" width="34" height="34"></div><p class="pain">Tarefa repetitiva, follow-up perdido?</p><h3>Automações e IA Aplicada</h3><p>Gatilhos, integrações e IA como copiloto operacional — com revisão humana no que é crítico.</p><span class="more">Ver página <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
-        <a class="card reveal d1" href="acesso-a-credito"><div class="bicon"><img loading="lazy" decoding="async" src="assets/icons/ic-diamond.png" alt="" width="34" height="34"></div><p class="pain">Crédito caro e no susto?</p><h3>Acesso a Crédito</h3><p>Captar preparado, comparado e sob controle. Acompanhamos da preparação à resposta do banco — a aprovação é da instituição; o preparo que melhora suas chances é com a Volto.</p><span class="more">Ver página <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
-        <a class="card reveal d2" href="operacao-assistida"><div class="bicon"><img loading="lazy" decoding="async" src="assets/icons/ic-mail.png" alt="" width="34" height="34"></div><p class="pain">Organizou — e mantém como?</p><h3>Operação Assistida</h3><p>Advisory recorrente ou um profissional da Volto operando uma função dentro da sua empresa.</p><span class="more">Ver página <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
-        <a class="card reveal d3" href="combo-projetos-especiais"><div class="bicon"><img loading="lazy" decoding="async" src="assets/icons/ic-doc.png" alt="" width="34" height="34"></div><p class="pain">Dor em várias frentes ao mesmo tempo?</p><h3>Combo e Projetos Especiais</h3><p>Várias trilhas em um plano faseado, ou um projeto sob medida para um tema pontual de alto impacto.</p><span class="more">Ver página <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="recorrencia">
+    <div class="container">
+      <p class="eyebrow reveal"><svg class="em"><use href="#mk"></use></svg> Recorrência · Operação Assistida</p>
+      <h2 class="measure reveal">Depois da primeira entrega, <span class="ital">o negócio em cadência</span></h2>
+      <p class="lead measure reveal" style="margin-top:14px">Três modalidades para manter o ganho e a decisão em dia — contratadas quando há utilidade concreta, com encerramento mediante aviso.</p>
+      <div class="grid cols-2 cols-3-lg" style="margin-top:36px">
+        <a class="card reveal d1" href="ritmo"><div class="bicon"><img loading="lazy" decoding="async" src="assets/icons/ic-waves.png" alt="" width="34" height="34"></div><p class="pain">O mês fecha sem leitura?</p><h3>Ritmo — fechamento e leitura mensal</h3><p>Os números fechados no sistema e lidos com você, todo mês. O carro-chefe da recorrência — a partir de R$ 800/mês.</p><span class="more">Ver página <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+        <a class="card reveal d2" href="operacao-assistida"><div class="bicon"><img loading="lazy" decoding="async" src="assets/icons/ic-mail.png" alt="" width="34" height="34"></div><p class="pain">Precisa de mais cadência?</p><h3>Advisory</h3><p>Reuniões, indicadores e apoio tático em ritmo intenso — o destino natural depois da primeira vitória.</p><span class="more">Ver página <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+        <a class="card reveal d3" href="bpo-financeiro"><div class="bicon"><img loading="lazy" decoding="async" src="assets/icons/ic-person.png" alt="" width="34" height="34"></div><p class="pain">Falta quem opere a função?</p><h3>BPO Financeiro</h3><p>Um profissional da Volto opera contas a pagar e receber, conciliação e rotina — com método e governança.</p><span class="more">Ver página <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
       </div>
     </div>
   </section>
@@ -184,6 +242,9 @@
       <div><h3>Navegar</h3><ul class="footer-links">
         <li><a href="diagnostico-360">Diagnóstico 360</a></li>
         <li><a href="servicos">Serviços</a></li>
+        <li><a href="ritmo">Ritmo — fechamento mensal</a></li>
+        <li><a href="bpo-financeiro">BPO Financeiro</a></li>
+        <li><a href="para-contadores">Para contadores</a></li>
         <li><a href="metodo">Método</a></li>
         <li><a href="sobre">Sobre</a></li>
         <li><a href="contato">Contato</a></li>

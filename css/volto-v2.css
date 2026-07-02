@@ -166,3 +166,16 @@
 /* a11y: contraste em seções escuras — sobrepõe .v2 .section .eyebrow (terracota) por areia */
 .v2 .section--dark .eyebrow,.v2 .section--terra .eyebrow{color:var(--areia)}
 .v2 .section--dark .kpi{color:var(--areia)}
+
+
+/* ===== v3: dropdown do menu Serviços ===== */
+.nav .nav-drop{position:relative;display:inline-flex}
+.nav .nav-drop>a{display:inline-flex;align-items:center;gap:5px}
+.nav-drop .dd{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(8px);padding-top:12px;opacity:0;visibility:hidden;transition:opacity .18s var(--ease),transform .18s var(--ease),visibility .18s}
+.nav-drop .dd-in{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--sh-md);padding:10px;min-width:236px;display:grid;gap:2px}
+.nav-drop:hover .dd,.nav-drop:focus-within .dd{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.nav-drop .dd a{display:block;padding:9px 12px;border-radius:8px;font-size:.92rem;white-space:nowrap}
+.nav-drop .dd a::after{content:none}
+.nav-drop .dd a:hover{background:var(--clareza)}
+.nav-drop .dd .dd-sep{height:1px;background:var(--line);margin:6px 4px}
+.mobile-menu .mm-sub{padding-left:18px;font-size:.95rem;opacity:.9}

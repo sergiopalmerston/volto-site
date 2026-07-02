@@ -17,7 +17,7 @@ Empresas em crescimento e em estágio inicial, cujo dono está engajado e dispos
 - **Sites Operáveis** — site que capta clientes e que o próprio dono atualiza.
 - **Automações e IA Aplicada** — gatilhos, integrações e IA copiloto com revisão humana.
 - **Acesso a Crédito** — preparar, comparar e simular captação. A Volto não é correspondente bancário, não capta nem assina pelo cliente e não garante aprovação.
-- **Operação Assistida** — advisory recorrente ou BPO (um profissional da Volto opera uma função dentro da empresa).
+- **Operação Assistida** — recorrência em três modalidades: **Ritmo** (carro-chefe: fechamento mensal dos números no sistema + reunião mensal de leitura, a partir de R$ 800/mês), **Advisory** (cadência intensa de reuniões e apoio tático) e **BPO Financeiro** (um profissional da Volto opera o gerencial — contas a pagar e receber, conciliação e rotina; não faz escrituração, fiscal nem DP).
 - **Combo Personalizável** — várias trilhas combinadas em um único plano.
 - **Projetos Especiais** — desafios fora do padrão.
 
@@ -35,6 +35,9 @@ A Volto usa IA e automação com confiança graduada: verde (rotina e baixo risc
 - **A Volto usa IA com segurança?** Sim, com governança de confiança graduada e revisão humana no que é crítico.
 - **A Volto substitui o contador?** Não. Cuida da gestão financeira e integra com a contabilidade.
 
+## Canal para contadores
+Contadores parceiros indicam clientes e recebem comissão recorrente: credenciado por termo de parceria, 10% ao mês por 12 meses sobre a recorrência de Ritmo e BPO indicada; indicação avulsa, 10% pontual com janela de 60 dias. A Volto não faz escrituração, fiscal nem DP — não concorre com o escritório. Página: https://voltoconsultoria.com.br/para-contadores
+
 ## Links
 - Início: https://voltoconsultoria.com.br/
 - Diagnóstico 360: https://voltoconsultoria.com.br/diagnostico-360
@@ -49,6 +52,9 @@ A Volto usa IA e automação com confiança graduada: verde (rotina e baixo risc
 - https://voltoconsultoria.com.br/automacoes-e-ia
 - https://voltoconsultoria.com.br/acesso-a-credito
 - https://voltoconsultoria.com.br/operacao-assistida
+- https://voltoconsultoria.com.br/ritmo
+- https://voltoconsultoria.com.br/bpo-financeiro
+- https://voltoconsultoria.com.br/para-contadores
 - https://voltoconsultoria.com.br/combo-projetos-especiais
 - https://voltoconsultoria.com.br/metodo
 - https://voltoconsultoria.com.br/sobre
