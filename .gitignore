@@ -11,3 +11,10 @@ _mp_*.txt
 # Editores
 .vscode/
 .idea/
+
+# wrangler / Cloudflare Workers
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
