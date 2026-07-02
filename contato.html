@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Falar com a Volto — conversa de triagem</title>
-<meta name="description" content="Agende uma conversa de triagem de 20 minutos com a Volto. Sem compromisso, para entender se podemos ajudar o seu negócio e qual o melhor primeiro passo.">
+<meta name="description" content="Responda oito perguntas rápidas e agende uma triagem gratuita de 20 minutos com a Volto — ou receba retorno em até 4 horas úteis. Sem compromisso.">
 <link rel="canonical" href="https://voltoconsultoria.com.br/contato">
 <meta name="theme-color" content="#963417">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -70,7 +70,7 @@
     <div class="container">
       <p class="eyebrow fu f1"><svg class="em"><use href="#mk"></use></svg> Conversa de triagem</p>
       <h1 class="display measure fu f2">Vamos conversar sobre <span class="ital">o seu negócio</span></h1>
-      <p class="lead measure fu f3">Uma conversa de 20 minutos, sem compromisso, para entender o momento da empresa e qual o melhor primeiro passo. Preencha abaixo — a mensagem vai direto para o nosso WhatsApp.</p>
+      <p class="lead measure fu f3">Oito perguntas rápidas — uns dois minutos. Dependendo do momento do negócio, você já sai daqui com a triagem gratuita de 20 minutos agendada; nos demais casos, retornamos em até 4 horas úteis pelo canal que você escolher.</p>
     </div>
   </section>
 
@@ -78,38 +78,121 @@
     <div class="container">
       <div class="grid cols-2" style="align-items:start;gap:clamp(24px,4vw,56px)">
 
-        <form class="form reveal" id="triagem" action="mailto:contato@voltoconsultoria.com.br" method="post" enctype="text/plain">
+        <div id="painel-form" class="reveal">
+        <form class="form" id="triagem" action="mailto:contato@voltoconsultoria.com.br" method="post" enctype="text/plain">
+          <div class="field"><label for="area">Qual área parece mais urgente hoje? <span class="req" aria-hidden="true">*</span></label>
+            <select id="area" name="area" required>
+              <option value="">Selecione…</option>
+              <option value="financeiro">Organizar meu dinheiro / saber se estou tendo lucro</option>
+              <option value="vendas">Vender mais / atrair e fechar mais clientes</option>
+              <option value="operacao">Organizar a rotina, os processos e a equipe</option>
+              <option value="sistema">Ter um sistema ou app para controlar o dia a dia</option>
+              <option value="marca">Melhorar a marca / a identidade visual</option>
+              <option value="site">Ter um site ou uma página</option>
+              <option value="automacao">Automatizar tarefas repetitivas</option>
+              <option value="nao-sei">Não sei dizer — preciso de ajuda para enxergar</option>
+            </select></div>
+          <div class="field"><label for="problema">Em uma frase, qual problema você quer resolver? <span class="req" aria-hidden="true">*</span></label>
+            <input id="problema" name="problema" type="text" required maxlength="200" placeholder="Do seu jeito, sem termo técnico"></div>
+          <div class="two">
+            <div class="field"><label for="controle">Como você controla isso hoje? <span class="req" aria-hidden="true">*</span></label>
+              <select id="controle" name="controle" required>
+                <option value="">Selecione…</option>
+                <option value="caderno">Caderno / papel</option>
+                <option value="planilha">Planilha</option>
+                <option value="whatsapp">WhatsApp</option>
+                <option value="sistema">Um sistema</option>
+                <option value="memoria">Na cabeça / memória</option>
+                <option value="equipe">A equipe resolve</option>
+                <option value="outro">Outro</option>
+              </select></div>
+            <div class="field"><label for="porte">Tamanho do negócio <span class="req" aria-hidden="true">*</span></label>
+              <select id="porte" name="porte" required>
+                <option value="">Selecione…</option>
+                <option value="so-eu">Só eu</option>
+                <option value="2-5">2 a 5 pessoas</option>
+                <option value="6-10">6 a 10 pessoas</option>
+                <option value="11-25">11 a 25 pessoas</option>
+                <option value="26-mais">26 ou mais</option>
+              </select></div>
+          </div>
+          <div class="two">
+            <div class="field"><label for="faturamento">Faturamento mensal aproximado</label>
+              <select id="faturamento" name="faturamento">
+                <option value="">Selecione (opcional)…</option>
+                <option value="ate-20-mil">Até R$ 20 mil</option>
+                <option value="20-50-mil">R$ 20 a 50 mil</option>
+                <option value="50-100-mil">R$ 50 a 100 mil</option>
+                <option value="100-300-mil">R$ 100 a 300 mil</option>
+                <option value="acima-300-mil">Acima de R$ 300 mil</option>
+                <option value="nao-informado">Prefiro não informar agora</option>
+              </select></div>
+            <div class="field"><label for="inicio">Quando quer começar? <span class="req" aria-hidden="true">*</span></label>
+              <select id="inicio" name="inicio" required>
+                <option value="">Selecione…</option>
+                <option value="agora">Agora</option>
+                <option value="30-dias">Nos próximos 30 dias</option>
+                <option value="60-dias">Em 60 dias</option>
+                <option value="sem-pressa">Sem pressa</option>
+              </select></div>
+          </div>
+          <div class="field"><label for="orcamento">Você já tem um valor separado para investir nisso?</label>
+            <select id="orcamento" name="orcamento">
+              <option value="">Selecione (opcional)…</option>
+              <option value="ainda-nao">Ainda não</option>
+              <option value="ate-1-mil">Até R$ 1 mil</option>
+              <option value="1-3-mil">R$ 1 a 3 mil</option>
+              <option value="3-7-mil">R$ 3 a 7 mil</option>
+              <option value="7-15-mil">R$ 7 a 15 mil</option>
+              <option value="acima-15-mil">Acima de R$ 15 mil</option>
+              <option value="depende">Depende da proposta</option>
+            </select></div>
           <div class="field"><label for="nome">Seu nome <span class="req" aria-hidden="true">*</span></label>
             <input id="nome" name="nome" type="text" required autocomplete="name" placeholder="Como podemos te chamar"></div>
           <div class="two">
-            <div class="field"><label for="whats">WhatsApp <span class="req" aria-hidden="true">*</span></label>
-              <input id="whats" name="whatsapp" type="tel" required autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000"></div>
-            <div class="field"><label for="email">E-mail</label>
-              <input id="email" name="email" type="email" autocomplete="email" placeholder="voce@email.com"></div>
+            <div class="field"><label for="canal">Melhor canal para responder <span class="req" aria-hidden="true">*</span></label>
+              <select id="canal" name="canal" required>
+                <option value="whatsapp" selected>WhatsApp</option>
+                <option value="email">E-mail</option>
+              </select></div>
+            <div class="field"><label for="contato">WhatsApp ou e-mail <span class="req" aria-hidden="true">*</span></label>
+              <input id="contato" name="contato" type="text" required autocomplete="tel" placeholder="(00) 00000-0000 ou voce@email.com"></div>
           </div>
-          <div class="field"><label for="negocio">Nome do negócio</label>
-            <input id="negocio" name="negocio" type="text" placeholder="Opcional"></div>
-          <div class="two">
-            <div class="field"><label for="segmento">Segmento</label>
-              <select id="segmento" name="segmento"><option value="">Selecione…</option><option>Comércio / varejo</option><option>Serviços</option><option>Alimentação</option><option>Indústria / produção</option><option>Saúde</option><option>Outro</option></select></div>
-            <div class="field"><label for="desafio">Maior desafio agora</label>
-              <select id="desafio" name="desafio"><option value="">Selecione…</option><option>Finanças e caixa</option><option>Vendas e marketing</option><option>Operação e processos</option><option>Sistema, site ou automação</option><option>Acesso a crédito</option><option>Não sei — quero o diagnóstico</option></select></div>
-          </div>
-          <div class="field"><label for="msg">Conte rapidamente o momento do negócio</label>
-            <textarea id="msg" name="mensagem" placeholder="Em uma ou duas frases: o que está pegando hoje?"></textarea></div>
-          <button class="btn btn--primary btn--lg" type="submit" style="justify-content:center;width:100%">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2z"></path></svg>
-            Enviar e abrir o WhatsApp</button>
-          <p class="form-note">Ao enviar, abrimos o WhatsApp com a sua mensagem pronta. Seus dados são usados só para este contato — sem spam.</p>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;height:0;width:0;opacity:0">
+          <button class="btn btn--primary btn--lg" type="submit" style="justify-content:center;width:100%">Enviar e ver o próximo passo</button>
+          <p class="form-note">Ao enviar, você concorda que a Volto use estes dados para te responder. Nada de spam — é só para este contato.</p>
         </form>
+        </div>
+
+        <div id="desfecho-quente" class="card" hidden>
+          <p class="eyebrow"><svg class="em"><use href="#mk"></use></svg> Próximo passo</p>
+          <h3 style="margin-top:10px">Pelo que você contou, vale conversar agora</h3>
+          <p style="color:var(--text-soft);margin-top:10px">Escolha um horário para a triagem gratuita de 20 minutos — uma conversa direta com os sócios para entender o momento do negócio e indicar o primeiro passo.</p>
+          <div id="cal-inline" style="width:100%;min-height:540px;overflow:auto;margin-top:18px" hidden></div>
+          <div class="btn-row" style="margin-top:18px">
+            <a id="quente-whats" class="btn btn--primary btn--lg" href="#" hidden>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2z"></path></svg>
+              Agendar agora pelo WhatsApp</a>
+          </div>
+          <p style="margin-top:14px" hidden><a id="quente-whats-alt" href="#">Prefere agendar pelo WhatsApp?</a></p>
+        </div>
+
+        <div id="desfecho-retorno" class="card" hidden>
+          <p class="eyebrow"><svg class="em"><use href="#mk"></use></svg> Recebido</p>
+          <h3 style="margin-top:10px">Obrigado — suas respostas chegaram</h3>
+          <p style="color:var(--text-soft);margin-top:10px">Retornamos em até <span id="retorno-horas">4</span> horas úteis pelo <span id="retorno-canal">WhatsApp</span>, já com uma leitura inicial do seu caso e o caminho sugerido.</p>
+          <div class="btn-row" style="margin-top:18px" hidden>
+            <a id="retorno-whats" class="btn btn--secondary" href="#">Enviar também pelo WhatsApp</a>
+          </div>
+        </div>
 
         <div class="stack reveal d2">
           <div class="card">
             <h3 style="margin-bottom:18px">O que acontece depois</h3>
             <ul class="flist">
-              <li><svg width="22" height="22" viewBox="0 0 24 24" style="flex:none;stroke:#963417;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12l4 4 10-11"></path></svg><span>Você envia o contexto pelo formulário ou WhatsApp.</span></li>
-              <li><svg width="22" height="22" viewBox="0 0 24 24" style="flex:none;stroke:#963417;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12l4 4 10-11"></path></svg><span>Respondemos em até um dia útil para marcar a conversa.</span></li>
-              <li><svg width="22" height="22" viewBox="0 0 24 24" style="flex:none;stroke:#963417;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12l4 4 10-11"></path></svg><span>Triagem de 20 minutos: entendemos o momento e se há fit.</span></li>
+              <li><svg width="22" height="22" viewBox="0 0 24 24" style="flex:none;stroke:#963417;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12l4 4 10-11"></path></svg><span>Você responde as oito perguntas — uns dois minutos.</span></li>
+              <li><svg width="22" height="22" viewBox="0 0 24 24" style="flex:none;stroke:#963417;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12l4 4 10-11"></path></svg><span>Conforme o momento do negócio, você já agenda a triagem na hora — ou retornamos em até 4 horas úteis pelo canal escolhido.</span></li>
+              <li><svg width="22" height="22" viewBox="0 0 24 24" style="flex:none;stroke:#963417;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12l4 4 10-11"></path></svg><span>Triagem de 20 minutos, conduzida pelos sócios: entendemos o momento e se há fit.</span></li>
               <li><svg width="22" height="22" viewBox="0 0 24 24" style="flex:none;stroke:#963417;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12l4 4 10-11"></path></svg><span>Se fizer sentido, o próximo passo costuma ser o Diagnóstico 360.</span></li>
             </ul>
           </div>
@@ -177,15 +260,9 @@
           if(frozen){document.querySelectorAll('.fu, .reveal').forEach(function(e){e.style.opacity='1';e.style.transform='none';e.style.animation='none';e.style.transition='none';e.classList.add('in');});}
         }catch(e){}
       },1300);
-      var WA="5564992686208", f=document.getElementById('triagem');
-      if(f){f.addEventListener('submit',function(e){
-        if(!f.checkValidity())return; e.preventDefault();
-        function v(id){var el=document.getElementById(id);return el&&el.value?el.value.trim():'';}
-        var linhas=['Olá! Quero agendar uma conversa de triagem com a Volto.','','Nome: '+v('nome'),'WhatsApp: '+v('whats'),v('email')?('E-mail: '+v('email')):'',v('negocio')?('Negócio: '+v('negocio')):'',v('segmento')?('Segmento: '+v('segmento')):'',v('desafio')?('Maior desafio: '+v('desafio')):'',v('msg')?('Contexto: '+v('msg')):''].filter(Boolean);
-        window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(linhas.join('\n')),'_blank','noopener');
-      });}
     }catch(e){console.error('volto',e);}
   })();
 </script>
+<script src="js/triagem.js" defer></script>
 </body>
 </html>
