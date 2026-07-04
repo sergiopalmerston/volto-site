@@ -150,7 +150,7 @@
    Sem aspect-ratio fixo no desktop: com o grid em align-items:stretch, a foto
    acompanha a altura da coluna de texto ao lado — fica equilibrada em qualquer
    largura, sem esticar demais em telas largas. min-height é só um piso. */
-.reveal.rr:has(.about-photo){display:flex}
+.reveal:has(>.about-photo){display:flex}
 .about-photo{position:relative;margin:0;width:100%;border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-md);border:1px solid var(--line);background:var(--paper);min-height:340px;height:100%}
 .about-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
 .about-photo .photo-credit{position:absolute;right:10px;bottom:10px}
