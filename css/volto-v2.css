@@ -160,10 +160,12 @@
 }
 
 /* ---------- 5c. Poucos passos: evita card órfão numa grade de 3 ----------
-   .steps--flow: em vez de 3+1 (com vão), vira 2x2 no tablet e linha única no
-   desktop (processo linear 1→2→3→4). */
-@media(min-width:720px){.steps.steps--flow{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:1040px){.steps.steps--flow{grid-template-columns:repeat(4,1fr)}}
+   Qualquer .steps com EXATAMENTE 4 passos (4º item é também o último) vira
+   2x2 no tablet e linha única no desktop (processo linear 1→2→3→4), em vez de
+   3+1 com vão. Regra geral via :has() — cobre TODAS as páginas automaticamente,
+   sem precisar de classe manual por seção. */
+@media(min-width:720px){.steps:has(> .step:nth-child(4):last-child){grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1040px){.steps:has(> .step:nth-child(4):last-child){grid-template-columns:repeat(4,1fr)}}
 
 /* ---------- 6. Movimento: marquee/título ---------- */
 .v2 .mq-item{font-size:clamp(1.15rem,1.8vw,1.4rem)}
