@@ -146,13 +146,24 @@
 .t-ops .ftab-visual{background:#c0852f}.t-ops .vtex{background-image:url('../assets/estampas/est-dourado.webp')}.t-ops .ftab-tag{background:#a9691f}.t-ops .ftab-body .fx-go{color:#a9691f}
 .t-assist .ftab-visual{background:#3C3F20}.t-assist .vtex{background-image:url('../assets/estampas/est-cerrado.webp')}.t-assist .ftab-tag{background:#3C3F20}.t-assist .ftab-body .fx-go{color:#3C3F20}
 
-/* ---------- 5b. Card de foto "Quem é a Volto" ---------- */
-.about-photo{position:relative;margin:0;border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-md);border:1px solid var(--line);aspect-ratio:4/3;background:var(--paper)}
-.about-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+/* ---------- 5b. Card de foto "Quem é a Volto" ----------
+   Sem aspect-ratio fixo no desktop: com o grid em align-items:stretch, a foto
+   acompanha a altura da coluna de texto ao lado — fica equilibrada em qualquer
+   largura, sem esticar demais em telas largas. min-height é só um piso. */
+.reveal.rr:has(.about-photo){display:flex}
+.about-photo{position:relative;margin:0;width:100%;border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-md);border:1px solid var(--line);background:var(--paper);min-height:340px;height:100%}
+.about-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
 .about-photo .photo-credit{position:absolute;right:10px;bottom:10px}
 @media(max-width:760px){
-  .about-photo{aspect-ratio:16/10}
+  /* empilhado, sem coluna de texto ao lado: a foto usa proporção própria */
+  .about-photo{min-height:0;aspect-ratio:16/10}
 }
+
+/* ---------- 5c. Poucos passos: evita card órfão numa grade de 3 ----------
+   .steps--flow: em vez de 3+1 (com vão), vira 2x2 no tablet e linha única no
+   desktop (processo linear 1→2→3→4). */
+@media(min-width:720px){.steps.steps--flow{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1040px){.steps.steps--flow{grid-template-columns:repeat(4,1fr)}}
 
 /* ---------- 6. Movimento: marquee/título ---------- */
 .v2 .mq-item{font-size:clamp(1.15rem,1.8vw,1.4rem)}
