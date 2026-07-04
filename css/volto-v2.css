@@ -167,6 +167,26 @@
 @media(min-width:720px){.steps:has(> .step:nth-child(4):last-child){grid-template-columns:repeat(2,1fr)}}
 @media(min-width:1040px){.steps:has(> .step:nth-child(4):last-child){grid-template-columns:repeat(4,1fr)}}
 
+/* ---------- 5d. Post-it "Ver a demo" nos cards de Sistema de Gestão ----------
+   O card é um <a>; o post-it é outro <a> irmão (nada de <a> aninhado). O wrapper
+   .card-stack vira o item da grade e ancora o post-it no canto. */
+.card-stack{position:relative;height:100%}
+.card-stack>.card{height:100%}
+.postit{
+  position:absolute;top:-7px;right:16px;z-index:3;
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:var(--font-body);font-weight:700;font-size:.74rem;letter-spacing:.01em;line-height:1;
+  color:#3a2410;background:#eab24f;
+  padding:8px 12px;border-radius:7px;text-decoration:none;white-space:nowrap;
+  transform:rotate(3deg);transform-origin:100% 0;
+  box-shadow:0 7px 16px rgba(60,42,16,.26);
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease);
+}
+.postit::after{content:none}
+.postit svg{width:13px;height:13px;flex:none}
+.card-stack:hover .postit,.postit:hover{transform:rotate(0) translateY(-2px);box-shadow:0 11px 22px rgba(60,42,16,.32)}
+@media(prefers-reduced-motion:reduce){.postit{transition:none}.card-stack:hover .postit,.postit:hover{transform:rotate(3deg)}}
+
 /* ---------- 6. Movimento: marquee/título ---------- */
 .v2 .mq-item{font-size:clamp(1.15rem,1.8vw,1.4rem)}
 .word-rise{display:inline-block}
