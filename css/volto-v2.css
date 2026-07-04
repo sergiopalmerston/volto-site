@@ -62,6 +62,9 @@
 .hero-sub{max-width:54ch;margin:18px auto 0;color:var(--text-soft);font-size:clamp(1.08rem,1.5vw,1.32rem);line-height:1.5}
 .hero-sub b{color:var(--terracota);font-family:var(--font-display);font-weight:600;font-style:italic}
 
+/* assinatura discreta do slogan sob o microcopy do hero */
+.hero-slogan{margin-top:20px;font-family:var(--font-display);font-style:italic;font-weight:500;font-size:1.02rem;color:var(--terracota);opacity:.9;letter-spacing:.01em}
+
 .frentes-explorer{--fc:var(--terracota);--fcb:rgba(150,52,23,.06);margin:34px auto 0;max-width:920px}
 .fx-rail{position:relative;display:flex;justify-content:center;gap:clamp(10px,3.5vw,48px);flex-wrap:wrap}
 .fx-rail::before{content:"";position:absolute;top:46px;left:8%;right:8%;height:2px;background:var(--line-2);z-index:0}
@@ -87,9 +90,17 @@
 .frentes-explorer.is-mkt .fx-stage::before{background-image:url('../assets/estampas/est-teal.webp')}
 .frentes-explorer.is-ops .fx-stage::before{background-image:url('../assets/estampas/est-dourado.webp')}
 .frentes-explorer.is-assist .fx-stage::before{background-image:url('../assets/estampas/est-cerrado.webp')}
-.fx-panels{position:relative}
-.fx-panel{position:absolute;inset:0;display:grid;grid-template-columns:auto 1fr auto;gap:clamp(16px,2.4vw,30px);align-items:center;padding:clamp(20px,2.6vw,30px) clamp(22px,3vw,38px);opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity .45s var(--ease),transform .45s var(--ease),visibility .45s;pointer-events:none;text-align:left}
-.fx-panel.on{position:relative;opacity:1;visibility:visible;transform:none;pointer-events:auto}
+/* palco de painéis: altura estável (baseada no maior painel) para não haver "pulo"
+   de layout, e todos os painéis empilhados no mesmo lugar */
+.fx-panels{position:relative;min-height:172px}
+.fx-panel{position:absolute;inset:0;display:grid;grid-template-columns:auto 1fr auto;gap:clamp(16px,2.4vw,30px);align-items:center;padding:clamp(20px,2.6vw,30px) clamp(22px,3vw,38px);opacity:0;visibility:hidden;transform:translateY(10px);
+  /* SAÍDA (estado padrão): some rápido para nunca coexistir legível com o que entra */
+  transition:opacity .16s var(--ease),transform .16s var(--ease),visibility 0s linear .16s;pointer-events:none;text-align:left}
+.fx-panel.on{position:relative;opacity:1;visibility:visible;transform:none;pointer-events:auto;z-index:1;
+  /* ENTRADA: o painel ativo entra no fluxo (define a altura do palco → nada é cortado)
+     e aparece logo depois (atraso), enquanto o que sai some rápido acima */
+  transition:opacity .34s var(--ease) .1s,transform .34s var(--ease) .1s,visibility 0s}
+@media(min-width:761px){.fx-panels{min-height:168px}}
 .fx-badge{width:64px;height:64px;border-radius:18px;background:var(--fc);display:flex;align-items:center;justify-content:center;flex:none}
 .fx-badge img{width:38px;height:38px}
 .fx-text h3{color:var(--cerrado);margin:0 0 5px;font-size:clamp(1.25rem,2vw,1.5rem)}
@@ -135,6 +146,14 @@
 .t-ops .ftab-visual{background:#c0852f}.t-ops .vtex{background-image:url('../assets/estampas/est-dourado.webp')}.t-ops .ftab-tag{background:#a9691f}.t-ops .ftab-body .fx-go{color:#a9691f}
 .t-assist .ftab-visual{background:#3C3F20}.t-assist .vtex{background-image:url('../assets/estampas/est-cerrado.webp')}.t-assist .ftab-tag{background:#3C3F20}.t-assist .ftab-body .fx-go{color:#3C3F20}
 
+/* ---------- 5b. Card de foto "Quem é a Volto" ---------- */
+.about-photo{position:relative;margin:0;border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-md);border:1px solid var(--line);aspect-ratio:4/3;background:var(--paper)}
+.about-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.about-photo .photo-credit{position:absolute;right:10px;bottom:10px}
+@media(max-width:760px){
+  .about-photo{aspect-ratio:16/10}
+}
+
 /* ---------- 6. Movimento: marquee/título ---------- */
 .v2 .mq-item{font-size:clamp(1.15rem,1.8vw,1.4rem)}
 .word-rise{display:inline-block}
@@ -161,6 +180,10 @@
 }
 @media(prefers-reduced-motion:reduce){
   .estampa-divisor::before,.estampa--breathe,.ftab-visual .vtex,.fx-chip .fx-ico img.ic-d{animation:none!important}
+  /* troca instantânea de painel, sem deslize nem crossfade prolongado */
+  .fx-panel{transition:opacity .01s linear,visibility 0s linear .01s!important;transform:none!important}
+  .fx-panel.on{transition:opacity .01s linear,visibility 0s!important;transform:none!important}
+  .hero-slogan{animation:none!important}
 }
 
 /* a11y: contraste em seções escuras — sobrepõe .v2 .section .eyebrow (terracota) por areia */

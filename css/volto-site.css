@@ -226,7 +226,7 @@ a.card:hover .bicon{background:rgba(150,52,23,.12)}
 .photoband .estampa{opacity:.07}
 .photoband .pb-inner{position:relative;z-index:1;color:var(--areia);max-width:60ch;padding:clamp(24px,4vw,48px)}
 .photoband .pb-inner .ital{color:#f0c89a}
-.photo-credit{position:absolute;right:14px;bottom:10px;z-index:2;font-size:.72rem;color:rgba(255,255,255,.62);text-decoration:none;letter-spacing:.02em}
+.photo-credit{position:absolute;right:14px;bottom:10px;z-index:2;font-size:.6rem;color:rgba(255,255,255,.42);text-decoration:none;letter-spacing:.04em;text-shadow:0 1px 2px rgba(0,0,0,.45)}
 .photo-credit:hover{color:#fff;text-decoration:underline}
 
 /* Marquee de trilhas */
@@ -275,9 +275,9 @@ a.card:hover .bicon{background:rgba(150,52,23,.12)}
 /* ===== v3: movimento, cores secundárias, estampa em card ===== */
 /* textura de estampa animada (lenta) no hero — como TEXTURA, não foto */
 .hero{position:relative;overflow:hidden}
-.hero-texture{position:absolute;inset:0;z-index:0;opacity:.13;background-image:url('../assets/estampas/est-hero-color.webp');background-size:780px auto;animation:drift 48s linear infinite}
+.hero-texture{position:absolute;inset:0;z-index:0;opacity:.13;background-image:url('../assets/estampas/est-hero-color.webp');background-size:780px auto;animation:drift 57s linear infinite}
 .hero>.container{position:relative;z-index:1}
-@keyframes drift{to{background-position:660px 0}}
+@keyframes drift{to{background-position:780px 0}}
 /* reveal palavra a palavra do título */
 .word{display:inline-block;opacity:0;transform:translateY(26px);animation:wordrise .72s var(--ease) forwards}
 @keyframes wordrise{to{opacity:1;transform:none}}
@@ -341,6 +341,7 @@ a.card:hover .bicon{background:rgba(150,52,23,.12)}
 
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .hero-texture{animation:none!important}
   .reveal{opacity:1!important;transform:none!important}
   .fu,.word{opacity:1!important;transform:none!important}
   .hub-spoke{stroke-dashoffset:0!important}.hub-node{opacity:1!important}
