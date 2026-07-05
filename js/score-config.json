@@ -1,6 +1,6 @@
 {
   "_comentario": "Calibragem do formulário direcionador (v3). Editar aqui recalibra o score sem rebuild. endpoint: URL do Formspree/Basin (vazio = leads seguem via WhatsApp). cal.link: caminho do evento no Cal.com, ex. 'sergio-volto/triagem-20min' (vazio = desfecho quente cai no WhatsApp).",
-  "endpoint": "",
+  "endpoint": "https://app.voltoconsultoria.com.br/api/triagem",
   "cal": { "link": "voltotriagem/triagem-de-20-min" },
   "whatsapp": "5564992686208",
   "retornoHorasUteis": 4,

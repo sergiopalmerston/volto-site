@@ -129,13 +129,17 @@
     return 'https://wa.me/' + cfg.whatsapp + '?text=' + encodeURIComponent(linhas.join('\n'));
   }
 
+  // Envia ao sistema (app.voltoconsultoria.com.br/api/triagem). Devolve o corpo
+  // da resposta ({ ok, score, quente, desfecho, trilha }) ou null se falhar —
+  // aí o formulário cai no fallback do WhatsApp e no cálculo local.
   function enviaEndpoint(payload) {
-    if (!cfg.endpoint) return Promise.resolve(false);
+    if (!cfg.endpoint) return Promise.resolve(null);
     return fetch(cfg.endpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify(payload)
-    }).then(function (r) { return r.ok; }).catch(function () { return false; });
+    }).then(function (r) { return r.ok ? r.json().catch(function () { return null; }) : null; })
+      .catch(function () { return null; });
   }
 
   function mostraCal(container) {
@@ -162,14 +166,18 @@
       if (!form.checkValidity()) { form.reportValidity(); return; }
       if (val(form, '_gotcha')) return; // honeypot: bot preencheu, descarta em silêncio
 
-      var r = calcula(form);
+      var rLocal = calcula(form);
       var trilha = trilhaDe(form);
-      var payload = montaPayload(form, r, trilha);
+      var payload = montaPayload(form, rLocal, trilha);
       var linkZap = textoWhats(payload);
       var btn = form.querySelector('button[type="submit"]');
       if (btn) { btn.disabled = true; btn.dataset.rotulo = btn.textContent; btn.textContent = 'Enviando…'; }
 
-      enviaEndpoint(payload).then(function (entregue) {
+      enviaEndpoint(payload).then(function (resp) {
+        // O sistema é a fonte de verdade do cálculo; sem resposta, usa o local (fallback).
+        var srvOk = !!(resp && resp.ok);
+        var r = srvOk ? { quente: !!resp.quente, score: resp.score } : rLocal;
+        var entregue = srvOk;
         if (r.quente) {
           esconde(painelForm); mostra(painelQuente);
           var calBox = document.getElementById('cal-inline');
