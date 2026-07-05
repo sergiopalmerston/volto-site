@@ -188,8 +188,23 @@
           <p class="eyebrow"><svg class="em"><use href="#mk"></use></svg> Veja antes de contratar</p>
           <h2>Um diagnóstico <span class="ital">de exemplo</span></h2>
           <p class="lead">Para saber o que você recebe, veja um exemplo de diagnóstico: a leitura das quatro áreas, o mapa de prioridades e o plano recomendado.</p>
-          <div class="btn-row" style="margin-top:22px"><a class="btn btn--primary" href="assets/diagnostico-exemplo.pdf" download>Baixar o diagnóstico de exemplo (PDF)</a></div>
-          <p class="form-note" style="margin-top:12px">Exemplo demonstrativo, sobre um negócio fictício. Se preferir, ele também é comentado na conversa de triagem — <a href="contato">agende a sua</a>.</p>
+          <form class="form" id="form-exemplo" method="post" style="margin-top:22px;max-width:520px" novalidate>
+            <p style="font-family:var(--font-display);color:var(--cerrado);font-size:1.2rem;margin-bottom:2px">Receba o exemplo do Diagnóstico 360</p>
+            <p class="form-note" style="margin-top:0">É um exemplo demonstrativo, sobre um negócio fictício (a Cantina da Praça). Deixe seu e-mail para acessar.</p>
+            <div class="field">
+              <label for="exemplo-email">Seu e-mail</label>
+              <input id="exemplo-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="nome@empresa.com.br" required>
+            </div>
+            <label style="display:flex;gap:10px;align-items:flex-start;font-size:.9rem;color:var(--text-soft)">
+              <input type="checkbox" name="consent" required style="margin-top:3px">
+              <span>Autorizo a Volto a usar meu e-mail para me enviar o material e falar sobre seus serviços. <a href="privacidade">Política de Privacidade</a>.</span>
+            </label>
+            <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px" placeholder="Deixe em branco">
+            <button class="btn btn--primary" id="exemplo-submit" type="submit">Baixar o exemplo</button>
+            <p id="exemplo-msg" class="form-note" role="status" aria-live="polite" hidden></p>
+            <noscript><p class="form-note">Para receber o exemplo, fale com a Volto por <a href="contato">contato</a> ou no WhatsApp.</p></noscript>
+          </form>
+          <p class="form-note" style="margin-top:12px">Se preferir, ele também é comentado na conversa de triagem — <a href="contato">agende a sua</a>.</p>
         </div>
         <div class="reveal d2"><figure class="about-photo">
           <img loading="lazy" decoding="async" width="1200" height="800" src="https://images.unsplash.com/photo-1758518730327-98070967caab?ixlib=rb-4.1.0&auto=format&fit=crop&w=1200&q=80" alt="Consultora apresentando um documento a um cliente sobre a mesa, em ambiente de escritório.">
@@ -279,5 +294,6 @@
     }catch(e){console.error('volto',e);}
   })();
 </script>
+<script src="js/exemplo.js?v=20260705c" defer></script>
 </body>
 </html>
