@@ -106,6 +106,13 @@ h3,.h3{font-size:clamp(1.3rem,2.1vw,1.6rem);color:var(--cerrado);font-weight:600
 .btn--lg{font-size:1.07rem;padding:17px 34px}
 .btn .arw{transition:transform .2s var(--ease)}.btn:hover .arw{transform:translateX(4px)}
 .btn-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}.center .btn-row{justify-content:center}
+/* Botões — conter na largura da tela e permitir quebra no mobile (fix 2026-07).
+   box-sizing:border-box já é global (*, ver topo); aqui basta max-width. */
+.btn{max-width:100%}
+@media(max-width:640px){
+  .btn{white-space:normal;text-align:center}
+  .btn--lg{padding:15px 22px;font-size:1rem;width:100%;justify-content:center}
+}
 
 /* Tag */
 .tag{display:inline-flex;align-items:center;gap:7px;font-size:.74rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
@@ -129,7 +136,8 @@ h3,.h3{font-size:clamp(1.3rem,2.1vw,1.6rem);color:var(--cerrado);font-weight:600
 .mobile-menu{display:none;border-bottom:1px solid var(--line);background:var(--clareza)}
 .mobile-menu.open{display:block}
 .mobile-menu .container{display:flex;flex-direction:column;padding-block:var(--sp-2) var(--sp-3);gap:2px}
-.mobile-menu a{color:var(--cerrado);text-decoration:none;font-weight:500;padding:14px 4px;border-bottom:1px solid var(--line)}
+.mobile-menu a:not(.btn){color:var(--cerrado);text-decoration:none;font-weight:500;padding:14px 4px;border-bottom:1px solid var(--line)}
+.mobile-menu .btn--primary{color:#fff}
 .mobile-menu .btn{margin-top:var(--sp-2);justify-content:center}
 @media(min-width:1000px){.mobile-menu{display:none!important}}
 
