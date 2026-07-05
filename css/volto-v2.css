@@ -248,3 +248,6 @@
 
 /* v3 a11y: --text-mut escurecido para >=4.5:1 sobre areia (#EAD2B0); era #6b6b58 (3.71:1) */
 :root{--text-mut:#5e5e49}
+
+/* v3 review: proporção correta dos ícones (Best Practices — nunca esticar o glifo LARTS) */
+.fx-ico img,.fx-badge img,.ftab-visual .vico img,.ftab .td,.ftab .tl,.fr-ico img{object-fit:contain}
