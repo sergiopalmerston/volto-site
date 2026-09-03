@@ -1,9 +1,9 @@
 # Volto Consultoria
 
-> A Volto é um hub de estruturação para empresas em crescimento que conecta finanças, posicionamento, vendas, operação e tecnologia aplicada, começando por um Diagnóstico 360 e evoluindo para sprints de implantação e acompanhamento recorrente.
+> A Volto é uma consultoria de estruturação para empresas em crescimento. O carro-chefe é o **BPO Financeiro** — terceirização da rotina financeira gerencial: contas a pagar e a receber, conciliação bancária e fechamento do mês, integrados ao contador do cliente. Em volta dele, a Volto conecta finanças, posicionamento, vendas, operação e tecnologia aplicada, começando pelo Diagnóstico 360.
 
 - **Slogan:** Clareza para dar o próximo passo.
-- **Região:** Goiânia (GO), Brasil — Caldas Novas e região.
+- **Região:** sede em Caldas Novas (GO), Brasil — atende Goiânia e região presencialmente e o restante do país de forma remota.
 - **Contato:** WhatsApp (64) 99268-6208 · contato@voltoconsultoria.com.br · @voltoconsultoria
 
 ## Para quem é
@@ -17,7 +17,7 @@ Empresas em crescimento e em estágio inicial, cujo dono está engajado e dispos
 - **Sites Operáveis** — site que capta clientes e que o próprio dono atualiza.
 - **Automações e IA Aplicada** — gatilhos, integrações e IA copiloto com revisão humana.
 - **Acesso a Crédito** — preparar, comparar e simular captação. A Volto não é correspondente bancário, não capta nem assina pelo cliente e não garante aprovação.
-- **Operação Assistida** — recorrência em três modalidades: **Ritmo** (carro-chefe: fechamento mensal dos números no sistema + reunião mensal de leitura, a partir de R$ 800/mês), **Advisory** (cadência intensa de reuniões e apoio tático) e **BPO Financeiro** (um profissional da Volto opera o gerencial — contas a pagar e receber, conciliação e rotina; não faz escrituração, fiscal nem DP).
+- **Operação Assistida** — recorrência em três modalidades: **BPO Financeiro** (carro-chefe: um profissional da Volto opera a rotina financeira gerencial da empresa — contas a pagar e a receber, conciliação bancária e fechamento do mês; **não** faz escrituração contábil, apuração fiscal nem departamento pessoal, que continuam com o contador do cliente. Três faixas: R$ 950, R$ 1.490 e R$ 2.490 por mês, conforme o tamanho da função), **Ritmo** (fechamento mensal dos números no sistema + reunião mensal de leitura) e **Advisory** (cadência intensa de reuniões e apoio tático).
 **Mecanismos comerciais (não são trilhas):**
 - **Combo Personalizável** — várias trilhas combinadas em um único plano faseado.
 - **Projetos Especiais** — escopo sob medida para um tema pontual de alto impacto.
@@ -31,8 +31,8 @@ A Volto usa IA e automação com confiança graduada: verde (rotina e baixo risc
 ## Perguntas frequentes
 - **O que é a Volto?** Um hub de estruturação para empresas em crescimento que conecta finanças, posicionamento, vendas, operação e tecnologia aplicada.
 - **Como sei por onde começar?** Pelo Diagnóstico 360, que lê as quatro frentes e devolve um plano de prioridades.
-- **Quanto custa começar?** Há duas faixas públicas: o Diagnóstico 360 a partir de R$ 1.200 (parcelável) e o Ritmo a partir de R$ 800/mês. O valor das demais trilhas sai do diagnóstico e do escopo fechado.
-- **Onde atua?** Sede em Goiânia (GO), com Caldas Novas e região presencialmente e o restante do Brasil de forma remota.
+- **Quanto custa começar?** Duas faixas são públicas: o **Diagnóstico 360 a partir de R$ 1.200** (parcelável) e o **BPO Financeiro de R$ 950 a R$ 2.490 por mês**, conforme o tamanho da função — volume de lançamentos, número de contas e maquininhas, e a dedicação que a rotina exige. O valor das demais trilhas sai do diagnóstico e do escopo fechado.
+- **Onde atua?** Sede em **Caldas Novas (GO)**, atendendo Goiânia e região presencialmente e o restante do Brasil de forma remota.
 - **A Volto usa IA com segurança?** Sim, com governança de confiança graduada e revisão humana no que é crítico.
 - **A Volto substitui o contador?** Não. Cuida da gestão financeira e integra com a contabilidade.
 

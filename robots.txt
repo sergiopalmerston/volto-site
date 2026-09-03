@@ -1,14 +1,20 @@
-User-agent: *
-Allow: /
+# A política de rastreadores de IA desta zona é gerenciada na BORDA (Cloudflare →
+# AI Crawl Control), e o bloco "Cloudflare Managed content" que aparece ACIMA deste
+# é a fonte da verdade: Content-Signal search=yes, ai-train=no, use=reference, mais
+# Disallow para os rastreadores de treinamento.
+#
+# Não redeclare esses agentes aqui. Havia grupos duplicados e contraditórios
+# (GPTBot e Google-Extended apareciam com Disallow no bloco gerenciado e Allow
+# logo abaixo), o que deixava o comportamento por conta do desempate do parser.
+# Removidos em 2026-09-01.
+#
+# Política vigente, verificada por curl em produção: rastreador que cita responde
+# 200 (OAI-SearchBot, PerplexityBot, Claude-SearchBot, ChatGPT-User, Applebot);
+# rastreador de treinamento responde 403 (GPTBot, ClaudeBot, CCBot, Bytespider,
+# meta-externalagent e outros 9). Para mudar, é no painel da Cloudflare — editar
+# este arquivo não altera o bloqueio, que é de rede.
 
-# Motores de IA (GEO) — liberados para citar e indexar
-User-agent: GPTBot
-Allow: /
-User-agent: OAI-SearchBot
-Allow: /
-User-agent: PerplexityBot
-Allow: /
-User-agent: Google-Extended
+User-agent: *
 Allow: /
 
 Sitemap: https://voltoconsultoria.com.br/sitemap.xml
